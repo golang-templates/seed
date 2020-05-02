@@ -1,0 +1,9 @@
+{
+    // gopls
+    "go.useLanguageServer": true,
+    // golangci-lint  
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ]
+}

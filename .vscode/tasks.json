@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "All",
+            "type": "shell",
+            "command": "mage -v all",
+            "problemMatcher": [
+                "$go"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "mage -v build",
+            "problemMatcher": [
+                "$go"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Lint",
+            "type": "shell",
+            "command": "mage -v lint",
+            "problemMatcher": [
+                "$go"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "mage -v test",
+            "problemMatcher": [
+                "$go"
+            ],
+            "group": "build"
+        }
+    ]
+}

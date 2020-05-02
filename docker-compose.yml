@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  builder:
+    container_name: builder
+    build: .
+    working_dir: /app
+    command: mage -v all
+    volumes:
+        - $PWD:/app
+    
