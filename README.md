@@ -1,11 +1,11 @@
-# Go Library Template
+# Go Project Template
 
 [![Build Status](https://github.com/golang-templates/library/workflows/build/badge.svg)](https://github.com/golang-templates/library/actions?query=workflow%3Abuild)
 [![GoDoc](https://godoc.org/github.com/golang-templates/library?status.svg)](https://godoc.org/github.com/golang-templates/library)
 [![GitHub Release](https://img.shields.io/github/release/golang-templates/library.svg)](https://github.com/golang-templates/library/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/library)](https://goreportcard.com/report/github.com/golang-templates/library)
 
-This is GitHub project template for a Go library. It has been created for ease-of-use for anyone who wants to:
+This is GitHub project template for a Go project. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
 - create a new repoisitory with basic Continous Integration.
