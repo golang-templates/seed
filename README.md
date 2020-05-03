@@ -47,7 +47,7 @@ Take notice that this project is build in a way that gives the developer a lot o
 1. Configure linters via [.golangci.yml](.golangci.yml).
 1. Develop Mage targets in [magefile.go](magefile.go) and assosiated tasks in [.vscode/tasks.json](.vscode/tasks.json).
 
-Notable directories/files description:
+Notable files:
 
 - [.devcontainer](.devcontainer/devcontainer.json) - Visual Studio Code Remote Cotainer configs
 - [.github](.github/workflows/build.yml) - GitHub Action workflow (CI build)
