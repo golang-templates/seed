@@ -90,7 +90,7 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 ```
 
-1. Remove Mage installation from [Dockerfile](Dockerfile).
+2. Remove Mage installation from [Dockerfile](Dockerfile).
 1. Update [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json) to use `make`.
 
 If you want to use Make on bare-metal Windows, then you can:
