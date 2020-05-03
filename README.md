@@ -97,12 +97,7 @@ If you want to use Make on bare-metal Windows, then you can use [WSL (Windows Su
 
 ### Why nothing for GoLand
 
-The maintainer does not use GoLand. Fell free to create a pull request which should contain:
-
-- GoLand configuration to use GolangCI-Lint,
-- GoLand configuration for Mage targets (like [.vscode/tasks.json](.vscode/tasks.json) for Visual Studio Code),
-- update [.gitignore](.gitignore) if required.
-- update [README](README.md) if possible.
+The maintainer does not use GoLand. Fell free to create a pull request for [#2](https://github.com/golang-templates/library/issues/2).
 
 ### Why GitHub Actions, not any other CI server
 
