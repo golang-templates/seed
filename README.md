@@ -52,7 +52,7 @@ Notable files:
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
 - [.github](.github/workflows/build.yml) - GitHub Action workflow (CI build)
 - [.vscode](.vscode) - Visual Studio Code configuration files
-- [.golangci.yml](.golangci.yml) - GolangCI-Lint config
+- [.golangci.yml](.golangci.yml) - GolangCI-Lint configuration
 - [docker-compose.yml](docker-compose.yml) - Compose file used in [CI Build](.github/workflows/build.yml)
 - [Dockerfile](Dockerfile) - Builder image used in [docker-compose.yml](docker-compose.yml) and [.devcontainer](.devcontainer/devcontainer.json)
 - [magefile.go](magefile.go) - Mage targets used in [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json)
