@@ -4,36 +4,36 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "All",
+            "label": "all",
             "type": "shell",
-            "command": "mage -v all",
+            "command": "make all",
             "problemMatcher": [
                 "$go"
             ],
             "group": "build"
         },
         {
-            "label": "Build",
+            "label": "build",
             "type": "shell",
-            "command": "mage -v build",
+            "command": "make build",
             "problemMatcher": [
                 "$go"
             ],
             "group": "build"
         },
         {
-            "label": "Lint",
+            "label": "lint",
             "type": "shell",
-            "command": "mage -v lint",
+            "command": "make lint",
             "problemMatcher": [
                 "$go"
             ],
             "group": "build"
         },
         {
-            "label": "Test",
+            "label": "test",
             "type": "shell",
-            "command": "mage -v test",
+            "command": "make test",
             "problemMatcher": [
                 "$go"
             ],
