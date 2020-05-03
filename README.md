@@ -28,7 +28,7 @@ It includes:
 
 ### Setup Development Environment
 
-Take notice that this project is build in a way that gives the developer a lot of freedom on the development environment setup. Below you can find proposals when using Visual Studio Code.
+Take notice that this project is build in a way that gives developers a lot of freedom on development environments setup. Below you can find proposals when using Visual Studio Code.
 
 - **Bare metal:** See [Dockerfile](Dockerfile) for Mage and GolangCI-Lint installation commands.
 - **Containers:** [Instructions](https://code.visualstudio.com/docs/remote/containers).
