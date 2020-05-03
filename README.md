@@ -49,7 +49,7 @@ Take notice that this project is build in a way that gives the developer a lot o
 
 Notable files:
 
-- [.devcontainer](.devcontainer/devcontainer.json) - Visual Studio Code Remote Cotainer configs
+- [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
 - [.github](.github/workflows/build.yml) - GitHub Action workflow (CI build)
 - [.vscode](.vscode) - Visual Studio Code configs
 - [.golangci.yml](.golangci.yml) - GolangCI-Lint config
