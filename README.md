@@ -25,13 +25,26 @@ It includes:
 1. Replace all occurences of `golang-templates/library` to `your_org/repo_name` in all files.
 1. Change [LICENSE](LICENSE) and [README.md](README.md).
 
-### Setup Development Environment
+### Setup Development Environment - Visual Studio Code
 
-Take notice that this project is build in a way that gives developers a lot of freedom on development environments setup. Below you can find proposals when using Visual Studio Code.
+#### Visual Studio Code - Bare-metal
 
-- **Bare metal:** See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
-- **Containers:** [Instructions](https://code.visualstudio.com/docs/remote/containers).
-- **Remote via SSH**: [Instructions](https://code.visualstudio.com/docs/remote/ssh).
+1. Install [Go](https://golang.org/doc/install) and [Go extension](https://code.visualstudio.com/docs/languages/go).
+1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
+1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
+
+#### Visual Studio Code - Development Container
+
+1. [Setup Development inside a Container](https://code.visualstudio.com/docs/remote/containers#_getting-started).
+1. Visual Studio Code inside Container: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
+1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
+
+#### Visual Studio Code - SSH
+
+1. [Setup Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh#_getting-started).
+1. On remote machine: install [Go](https://golang.org/doc/install) and [Go extension](https://code.visualstudio.com/docs/languages/go).
+1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
+1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
 
 ### Build
 
@@ -42,7 +55,7 @@ Take notice that this project is build in a way that gives developers a lot of f
 ### Maintainance
 
 1. `Watch` this project to get notified about new releases, issues, etc.
-1. Update Go and GolangCI-Lint version in [Dockerfile](Dockerfile). Take notice that when working on non-container environment, then you should have to do it manually on the machine.
+1. Update Go and GolangCI-Lint version in [Dockerfile](Dockerfile).
 1. Configure linters via [.golangci.yml](.golangci.yml).
 1. Develop Make targets in [Makefile](Makefile) and assosiated tasks in [.vscode/tasks.json](.vscode/tasks.json).
 
