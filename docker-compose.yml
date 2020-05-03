@@ -4,7 +4,6 @@ services:
     container_name: builder
     build: .
     working_dir: /app
-    command: mage -v all
+    command: make all
     volumes:
         - $PWD:/app
-    
