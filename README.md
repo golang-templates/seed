@@ -57,6 +57,62 @@ Notable files:
 - [Dockerfile](Dockerfile) - Builder image used in [docker-compose.yml](docker-compose.yml) and [.devcontainer](.devcontainer/devcontainer.json)
 - [magefile.go](magefile.go) - Mage targets used in [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json)
 
+## FAQ
+
+### Why Mage instead of Make
+
+Here is [why](https://github.com/magefile/mage#why).
+However, updating to Make is pretty straightforward.
+
+1. Replace [magefile.go](magefile.go) with a `Makefile` file:
+
+```make
+.DEFAULT_GOAL := help
+
+.PHONY: all
+all: build lint test
+
+.PHONY: build
+## build: Run go build
+build:
+    go build ./...
+
+.PHONY: lint
+## lint: Run golangci-lint
+lint:
+    golangci-lint run
+
+.PHONY: test
+## test: Run go test with race detector and code covarage
+test:
+    go test -race -covermode=atomic
+
+.PHONY: help
+## help: Print help message
+help:
+    @echo "Usage: \n"
+    @sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
+
+```
+
+1. Remove Mage installation from [Dockerfile](Dockerfile).
+1. Update [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json) to use `make`.
+
+If you are developing on Windows (and not using) then you can:
+
+1. install Docker and Visual Studio Code Remote Container extension,
+1. install [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10),
+1. install [Make Windows port to Git Bash](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+
+### Why nothing for GoLand
+
+The maintainer does not use GoLand. Fell free to create a pull request which should contain:
+
+- GoLand config to use golangci-lint,
+- GoLand config for Mage targets (like [.vscode/tasks.json](.vscode/tasks.json) for Visua Studio Code),
+- update [.gitignore](.gitignore) if required.
+- update README(README.md) if possible.
+
 ## Contributing
 
 Simply create an issue or a pull request.

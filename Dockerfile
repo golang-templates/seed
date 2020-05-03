@@ -1,4 +1,4 @@
-# Go
+# go
 FROM golang:1.14.2
 # mage
 RUN GO111MODULE=on go get github.com/magefile/mage@v1.9.0
