@@ -105,7 +105,7 @@ The maintainer does not use GoLand. Fell free to create a pull request which sho
 - GoLand config to use golangci-lint,
 - GoLand config for Mage targets (like [.vscode/tasks.json](.vscode/tasks.json) for Visua Studio Code),
 - update [.gitignore](.gitignore) if required.
-- update README(README.md) if possible.
+- update [README](README.md) if possible.
 
 ### Why GitHub Actions, not any other CI server
 
