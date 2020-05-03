@@ -30,8 +30,8 @@ It includes:
 
 Take notice that this project is build in a way that gives the developer a lot of freedom on the development environment setup. Below you can find proposals when using Visual Studio Code.
 
-- **Bare metal:** Install Go, Visual Studio Code, Mage and GolangCI-Lint (see [Dockerfile](Dockerfile) for Mage and GolangCI-Lint installation commands).
-- **Containers:** Install Docker, Visual Studio Code with Remote - Container extension. [Instructions](https://code.visualstudio.com/docs/remote/containers).
+- **Bare metal:** See [Dockerfile](Dockerfile) for Mage and GolangCI-Lint installation commands.
+- **Containers:** [Instructions](https://code.visualstudio.com/docs/remote/containers).
 - **Remote via SSH**: [Instructions](https://code.visualstudio.com/docs/remote/ssh).
 
 ### Build
