@@ -13,7 +13,7 @@ This is GitHub project template for a Go library. It has been created for ease-o
 
 It includes:
 
-- [Visual Studio Code](https://code.visualstudio.com) config with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
+- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
 - build automation via [Mage](https://magefile.org), [Docker](https://docs.docker.com/engine), [Docker Compose](https://docs.docker.com/compose), [GitHub Actions](https://github.com/features/actions).
