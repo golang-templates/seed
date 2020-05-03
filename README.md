@@ -102,7 +102,7 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-However, changing to any other CI server should be very simple, becasue this repo uses Docker Compose to run CI build to make the transition easy.
+However, changing to any other CI server should be very simple, because this repository uses Docker Compose to run CI build to make the transition easy.
 
 For [CircleCI](https://circleci.com/docs/2.0/executor-types/#using-machine) create `.circleci/config.yml` file:
 
