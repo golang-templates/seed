@@ -93,10 +93,7 @@ help:
 2. Remove Mage installation from [Dockerfile](Dockerfile).
 1. Update [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json) to use `make`.
 
-If you want to use Make on bare-metal Windows, then you can:
-
-1. use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and [Visual Studio Code Remote SSH extension](https://code.visualstudio.com/docs/remote/wsl),
-1. install [Make Windows port to Git Bash](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+If you want to use Make on bare-metal Windows, then you can use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or install [Make Windows port to Git Bash](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
 ### Why nothing for GoLand
 
