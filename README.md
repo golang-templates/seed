@@ -92,7 +92,6 @@ test:
 help:
     @echo "Usage: \n"
     @sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
-
 ```
 
 1. Remove Mage installation from [Dockerfile](Dockerfile).
@@ -112,6 +111,24 @@ The maintainer does not use GoLand. Fell free to create a pull request which sho
 - GoLand config for Mage targets (like [.vscode/tasks.json](.vscode/tasks.json) for Visua Studio Code),
 - update [.gitignore](.gitignore) if required.
 - update README(README.md) if possible.
+
+### Why GitHub Actions, not any other CI server
+
+GitHub Actions is out-of-the-box if you are already using GitHub.
+However, changing to any other CI server should be very simple, becasue this repo uses Docker Compose to run CI build to make the transition easy.
+
+For [CircleCI](https://circleci.com/docs/2.0/executor-types/#using-machine) create `.circleci/config.yml` file:
+
+```yml
+version: 2.1
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout
+      - run: docker-compose up --abort-on-container-exit
+```
 
 ## Contributing
 
