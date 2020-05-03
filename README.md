@@ -70,7 +70,7 @@ However, updating to Make is pretty straightforward.
 .DEFAULT_GOAL := help
 
 .PHONY: all
-all: ## full build: build, lint, test.
+all: ## full build: build, lint, test
 all: build lint test 
 
 .PHONY: build
