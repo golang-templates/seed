@@ -75,23 +75,23 @@ all: build lint test
 .PHONY: build
 ## build: Run go build
 build:
-    go build ./...
+	go build ./...
 
 .PHONY: lint
 ## lint: Run golangci-lint
 lint:
-    golangci-lint run
+	golangci-lint run
 
 .PHONY: test
 ## test: Run go test with race detector and code covarage
 test:
-    go test -race -covermode=atomic
+	go test -race -covermode=atomic
 
 .PHONY: help
 ## help: Print help message
 help:
-    @echo "Usage: \n"
-    @sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
+	@echo "Usage: \n"
+	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
 ```
 
 1. Remove Mage installation from [Dockerfile](Dockerfile).
