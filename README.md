@@ -103,7 +103,7 @@ If you want to use Make on bare-metal Windows, then you can:
 The maintainer does not use GoLand. Fell free to create a pull request which should contain:
 
 - GoLand config to use golangci-lint,
-- GoLand config for Mage targets (like [.vscode/tasks.json](.vscode/tasks.json) for Visua Studio Code),
+- GoLand configuration for Mage targets (like [.vscode/tasks.json](.vscode/tasks.json) for Visual Studio Code),
 - update [.gitignore](.gitignore) if required.
 - update [README](README.md) if possible.
 
