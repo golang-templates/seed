@@ -60,7 +60,7 @@ Notable files:
 
 ### Make does not work on Windows
 
-You can use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or install [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+You can use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
 ### Why nothing for GoLand
 
