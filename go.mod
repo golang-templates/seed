@@ -1,3 +1,3 @@
-module github.com/golang-templates/library
+module github.com/golang-templates/seed
 
 go 1.14

@@ -1,9 +1,9 @@
 # Go Project Template
 
-[![Build Status](https://github.com/golang-templates/library/workflows/build/badge.svg)](https://github.com/golang-templates/library/actions?query=workflow%3Abuild)
-[![GoDoc](https://godoc.org/github.com/golang-templates/library?status.svg)](https://godoc.org/github.com/golang-templates/library)
-[![GitHub Release](https://img.shields.io/github/release/golang-templates/library.svg)](https://github.com/golang-templates/library/releases)
-[![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/library)](https://goreportcard.com/report/github.com/golang-templates/library)
+[![Build Status](https://github.com/golang-templates/seed/workflows/build/badge.svg)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild)
+[![GoDoc](https://godoc.org/github.com/golang-templates/seed?status.svg)](https://godoc.org/github.com/golang-templates/seed)
+[![GitHub Release](https://img.shields.io/github/release/golang-templates/seed.svg)](https://github.com/golang-templates/seed/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 
 This is GitHub project template for a Go project. It has been created for ease-of-use for anyone who wants to:
 
@@ -22,7 +22,7 @@ It includes:
 ## Usage
 
 1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurences of `golang-templates/library` to `your_org/repo_name` in all files.
+1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Change [LICENSE](LICENSE) and [README.md](README.md).
 
 ### Setup Development Environment - Visual Studio Code
@@ -77,7 +77,7 @@ You can use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us
 
 ### Why nothing for GoLand
 
-The maintainer does not use GoLand. Fell free to create a pull request for [#2](https://github.com/golang-templates/library/issues/2).
+The maintainer does not use GoLand. Fell free to create a pull request for [#2](https://github.com/golang-templates/seed/issues/2).
 
 ### Why GitHub Actions, not any other CI server
 

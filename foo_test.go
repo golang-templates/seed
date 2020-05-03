@@ -1,9 +1,9 @@
-package library_test
+package seed_test
 
 import (
 	"testing"
 
-	. "github.com/golang-templates/library"
+	. "github.com/golang-templates/seed"
 )
 
 func TestFoo(t *testing.T) {
