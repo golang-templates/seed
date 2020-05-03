@@ -5,7 +5,7 @@
 [![GitHub Release](https://img.shields.io/github/release/golang-templates/seed.svg)](https://github.com/golang-templates/seed/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 
-This is GitHub project template for a Go project. It has been created for ease-of-use for anyone who wants to:
+This is GitHub project template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
 - create a new repoisitory with basic Continous Integration.
