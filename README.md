@@ -25,7 +25,7 @@ It includes:
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Change [LICENSE](LICENSE) and [README.md](README.md).
 
-### Setup Development Environment - Visual Studio Code
+### Setup Development Environment
 
 #### Visual Studio Code - Bare-metal
 
