@@ -33,6 +33,8 @@ It includes:
 1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
 1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
 
+**Make on Windows:** Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+
 #### Visual Studio Code - Development Container
 
 1. [Setup Development inside a Container](https://code.visualstudio.com/docs/remote/containers#_getting-started).
@@ -70,10 +72,6 @@ Notable files:
 - [Makefile](Makefile) - Make targets used in [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json)
 
 ## FAQ
-
-### Make does not work on Windows
-
-You can use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
 ### Why nothing for GoLand
 
