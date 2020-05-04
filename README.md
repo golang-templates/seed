@@ -1,11 +1,11 @@
-# Go Project Template
+# Go Repository Template
 
 [![Build Status](https://github.com/golang-templates/seed/workflows/build/badge.svg)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild)
 [![GoDoc](https://godoc.org/github.com/golang-templates/seed?status.svg)](https://godoc.org/github.com/golang-templates/seed)
 [![GitHub Release](https://img.shields.io/github/release/golang-templates/seed.svg)](https://github.com/golang-templates/seed/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 
-This is GitHub project template for Go. It has been created for ease-of-use for anyone who wants to:
+This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
 - create a new repoisitory with basic Continous Integration.
@@ -17,7 +17,7 @@ It includes:
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
 - build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [Docker Compose](https://docs.docker.com/compose), [GitHub Actions](https://github.com/features/actions).
 
-`Star` this project if you find it valuable and worth maintaining.
+`Star` this repository if you find it valuable and worth maintaining.
 
 ## Usage
 
@@ -54,7 +54,7 @@ It includes:
 
 ### Maintainance
 
-1. `Watch` this project to get notified about new releases, issues, etc.
+1. `Watch` this repository to get notified about new releases, issues, etc.
 1. Update Go and GolangCI-Lint version in [Dockerfile](Dockerfile).
 1. Configure linters via [.golangci.yml](.golangci.yml).
 1. Develop Make targets in [Makefile](Makefile) and assosiated tasks in [.vscode/tasks.json](.vscode/tasks.json).
