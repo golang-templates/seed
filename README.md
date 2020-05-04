@@ -17,7 +17,7 @@ It includes:
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
 - build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [Docker Compose](https://docs.docker.com/compose), [GitHub Actions](https://github.com/features/actions).
 
-`Star` this project if you find it valuable and worth maintaining.
+`Star` this repository if you find it valuable and worth maintaining.
 
 ## Usage
 
@@ -54,7 +54,7 @@ It includes:
 
 ### Maintainance
 
-1. `Watch` this project to get notified about new releases, issues, etc.
+1. `Watch` this repository to get notified about new releases, issues, etc.
 1. Update Go and GolangCI-Lint version in [Dockerfile](Dockerfile).
 1. Configure linters via [.golangci.yml](.golangci.yml).
 1. Develop Make targets in [Makefile](Makefile) and assosiated tasks in [.vscode/tasks.json](.vscode/tasks.json).
