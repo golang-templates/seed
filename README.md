@@ -13,6 +13,7 @@ This is a GitHub repository template for Go. It has been created for ease-of-use
 It includes:
 
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
+- [modd](https://github.com/cortesi/modd) configuration,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
 - build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [Docker Compose](https://docs.docker.com/compose), [GitHub Actions](https://github.com/features/actions).
@@ -53,6 +54,7 @@ It includes:
 - Terminal: `make all`.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` → Select `All`.
 - Terminal: `docker-compose up --abort-on-container-exit`. This command is executed by CI build (GitHub Action workflow).
+- [modd](https://github.com/cortesi/modd) would execute build on any *.go file change.
 
 ### Maintainance
 
@@ -70,6 +72,7 @@ Notable files:
 - [docker-compose.yml](docker-compose.yml) - Compose file used in [CI build](.github/workflows/build.yml)
 - [Dockerfile](Dockerfile) - Builder image used in [docker-compose.yml](docker-compose.yml) and [devcontainer.json](.devcontainer/devcontainer.json)
 - [Makefile](Makefile) - Make targets used in [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json)
+- [modd.conf](modd.conf) - [modd](https://github.com/cortesi/modd) configuration file
 
 ## FAQ
 
