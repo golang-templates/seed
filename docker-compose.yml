@@ -1,9 +1,0 @@
-version: "3.7"
-services:
-  builder:
-    container_name: builder
-    build: .
-    working_dir: /app
-    command: make all
-    volumes:
-        - $PWD:/app

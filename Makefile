@@ -2,7 +2,12 @@
 
 .PHONY: all
 all: ## full build: build, lint, test
-all: build lint test
+all: install build lint test
+
+.PHONY: install
+install: ## install build tools
+	$(call print-target)
+	./install.sh
 
 .PHONY: build
 build: ## go build
@@ -18,6 +23,10 @@ lint: ## golangci-lint
 test: ## go test with race detector and code covarage
 	$(call print-target)
 	go test -race -covermode=atomic
+
+.PHONY: ci-build
+ci-build:
+	docker run --rm -v $(CURDIR):/app golang:1.14 sh -c "cd /app && make all"
 
 .PHONY: help
 help:

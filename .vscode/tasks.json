@@ -11,33 +11,6 @@
                 "$go"
             ],
             "group": "build"
-        },
-        {
-            "label": "build",
-            "type": "shell",
-            "command": "make build",
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "lint",
-            "type": "shell",
-            "command": "make lint",
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "test",
-            "type": "shell",
-            "command": "make test",
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build"
         }
     ]
 }
