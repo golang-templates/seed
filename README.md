@@ -13,7 +13,6 @@ This is a GitHub repository template for Go. It has been created for ease-of-use
 It includes:
 
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
-- [modd](https://github.com/cortesi/modd) configuration,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
 - build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [GitHub Actions](https://github.com/features/actions).
@@ -69,7 +68,6 @@ Notable files:
 - [.golangci.yml](.golangci.yml) - GolangCI-Lint configuration
 - [install.sh](install.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used in [CI build](.github/workflows/build.yml) and [.vscode/tasks.json](.vscode/tasks.json)
-- [modd.conf](modd.conf) - [modd](https://github.com/cortesi/modd) configuration file
 
 ## FAQ
 
