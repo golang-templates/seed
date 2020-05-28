@@ -2,11 +2,11 @@
 
 .PHONY: all
 all: ## full build
-all: clean fmt install build lint test
+all: clean install build fmt lint test
 
 .PHONY: dev
 dev: ## fast build
-dev: install fmt build lint-fast test
+dev: install build fmt lint-fast test
 
 .PHONY: clean
 clean: ## go clean
@@ -18,15 +18,15 @@ install: ## install build tools
 	$(call print-target)
 	./install.sh
 
-.PHONY: fmt
-fmt: ## goimports
-	$(call print-target)
-	goimports -l -w .
-
 .PHONY: build
 build: ## go build
 	$(call print-target)
 	go build ./...
+
+.PHONY: fmt
+fmt: ## goimports
+	$(call print-target)
+	goimports -l -w .
 
 .PHONY: lint
 lint: ## golangci-lint
