@@ -13,10 +13,9 @@ This is a GitHub repository template for Go. It has been created for ease-of-use
 It includes:
 
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
-- [modd](https://github.com/cortesi/modd) configuration,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
-- build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [Docker Compose](https://docs.docker.com/compose), [GitHub Actions](https://github.com/features/actions).
+- build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [GitHub Actions](https://github.com/features/actions).
 
 `Star` this repository if you find it valuable and worth maintaining.
 
@@ -32,7 +31,6 @@ It includes:
 
 1. Install [Go](https://golang.org/doc/install) and [Go extension](https://code.visualstudio.com/docs/languages/go).
 1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
-1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
 
 **Make on Windows:** Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
@@ -40,28 +38,26 @@ It includes:
 
 1. [Setup Development inside a Container](https://code.visualstudio.com/docs/remote/containers#_getting-started).
 1. Visual Studio Code inside Container: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
-1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
 
 #### Visual Studio Code - SSH
 
 1. [Setup Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh#_getting-started).
 1. On remote machine: install [Go](https://golang.org/doc/install) and [Go extension](https://code.visualstudio.com/docs/languages/go).
 1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
-1. See [Dockerfile](Dockerfile) for GolangCI-Lint installation command.
 
 ### Build
 
-- Terminal: `make all`.
-- Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` → Select `All`.
-- Terminal: `docker-compose up --abort-on-container-exit`. This command is executed by CI build (GitHub Action workflow).
-- [modd](https://github.com/cortesi/modd) would execute build on any *.go file change.
+- Terminal: `make` to get help for make target.
+- Terminal: `make all` to execute a full build.
+- Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
 
 ### Maintainance
 
 1. `Watch` this repository to get notified about new releases, issues, etc.
-1. Update Go and GolangCI-Lint version in [Dockerfile](Dockerfile).
+1. Update Go version in [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
+1. Update and add additional build tools in [install.sh](install.sh).
 1. Configure linters via [.golangci.yml](.golangci.yml).
-1. Develop Make targets in [Makefile](Makefile) and assosiated tasks in [.vscode/tasks.json](.vscode/tasks.json).
+1. Develop Make targets in [Makefile](Makefile).
 
 Notable files:
 
@@ -69,10 +65,8 @@ Notable files:
 - [.github](.github/workflows/build.yml) - GitHub Action workflow (CI build)
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - GolangCI-Lint configuration
-- [docker-compose.yml](docker-compose.yml) - Compose file used in [CI build](.github/workflows/build.yml)
-- [Dockerfile](Dockerfile) - Builder image used in [docker-compose.yml](docker-compose.yml) and [devcontainer.json](.devcontainer/devcontainer.json)
-- [Makefile](Makefile) - Make targets used in [docker-compose.yml](docker-compose.yml) and [.vscode/tasks.json](.vscode/tasks.json)
-- [modd.conf](modd.conf) - [modd](https://github.com/cortesi/modd) configuration file
+- [install.sh](install.sh) - build tools installation script
+- [Makefile](Makefile) - Make targets used in [CI build](.github/workflows/build.yml) and [.vscode/tasks.json](.vscode/tasks.json)
 
 ## FAQ
 
@@ -83,7 +77,7 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-However, changing to any other CI server should be very simple, because this repository uses Docker Compose to run CI build to make the transition easy.
+However, changing to any other CI server should be very simple, because this repository uses Docker to run CI build to make the transition easy.
 
 For [CircleCI](https://circleci.com/docs/2.0/executor-types/#using-machine) create `.circleci/config.yml` file:
 
@@ -95,7 +89,7 @@ jobs:
       image: ubuntu-1604:201903-01
     steps:
       - checkout
-      - run: docker-compose up --abort-on-container-exit
+      - run: make docker run="make all"
 ```
 
 ## Contributing

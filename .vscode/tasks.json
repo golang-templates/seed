@@ -4,40 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "all",
+            "label": "dev",
             "type": "shell",
-            "command": "make all",
+            "command": "make dev",
             "problemMatcher": [
                 "$go"
             ],
-            "group": "build"
-        },
-        {
-            "label": "build",
-            "type": "shell",
-            "command": "make build",
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "lint",
-            "type": "shell",
-            "command": "make lint",
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "test",
-            "type": "shell",
-            "command": "make test",
-            "problemMatcher": [
-                "$go"
-            ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
