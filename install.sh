@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 if ! [ -x "$(command -v golangci-lint)" ] || [ "$(golangci-lint --version)" != "golangci-lint has version 1.27.0 built from fb74c2e on 2020-05-13T18:48:26Z" ] ; then

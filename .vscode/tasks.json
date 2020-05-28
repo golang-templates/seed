@@ -4,13 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "all",
+            "label": "dev",
             "type": "shell",
-            "command": "make all",
+            "command": "make dev",
             "problemMatcher": [
                 "$go"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

@@ -48,10 +48,10 @@ It includes:
 
 ### Build
 
-- Terminal: `make all`.
-- Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` → Select `all`.
-- Terminal: `make ci-build`. This command is executed by CI build (GitHub Action workflow).
-- [modd](https://github.com/cortesi/modd) would execute build on any *.go file change.
+- Terminal: `make` to get help for make target.
+- Terminal: `make all` to execute a full build.
+- Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
+- [modd](https://github.com/cortesi/modd) would execute the fast build on any *.go file change.
 
 ### Maintainance
 
@@ -67,7 +67,7 @@ Notable files:
 - [.github](.github/workflows/build.yml) - GitHub Action workflow (CI build)
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - GolangCI-Lint configuration
-- [install.sh](install) - build tools installation script
+- [install.sh](install.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used in [CI build](.github/workflows/build.yml) and [.vscode/tasks.json](.vscode/tasks.json)
 - [modd.conf](modd.conf) - [modd](https://github.com/cortesi/modd) configuration file
 
@@ -92,7 +92,7 @@ jobs:
       image: ubuntu-1604:201903-01
     steps:
       - checkout
-      - run: make ci-build
+      - run: make docker run="make all"
 ```
 
 ## Contributing

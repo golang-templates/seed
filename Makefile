@@ -1,8 +1,17 @@
 .DEFAULT_GOAL := help
 
 .PHONY: all
-all: ## full build: build, lint, test
-all: install build lint test
+all: ## full build
+all: clean install build lint test
+
+.PHONY: dev
+dev: ## fast build
+dev: install build lint-fast test
+
+.PHONY: clean
+clean: ## go clean
+	$(call print-target)
+	go clean -r -i -cache -testcache -modcache
 
 .PHONY: install
 install: ## install build tools
@@ -19,14 +28,19 @@ lint: ## golangci-lint
 	$(call print-target)
 	golangci-lint run
 
+.PHONY: lint-fast
+lint-fast: ## golangci-lint --fast
+	$(call print-target)
+	golangci-lint run --fast
+
 .PHONY: test
 test: ## go test with race detector and code covarage
 	$(call print-target)
 	go test -race -covermode=atomic
 
-.PHONY: ci-build
-ci-build:
-	docker run --rm -v $(CURDIR):/app golang:1.14 sh -c "cd /app && make all"
+.PHONY: docker
+docker: ## run in golang container, example: make docker run="make all"
+	docker run --rm -v $(CURDIR):/app golang:1.14 sh -c "cd /app && $(run)"
 
 .PHONY: help
 help:
