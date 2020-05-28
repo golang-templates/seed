@@ -50,7 +50,6 @@ It includes:
 - Terminal: `make` to get help for make target.
 - Terminal: `make all` to execute a full build.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
-- [modd](https://github.com/cortesi/modd) would execute the fast build on any *.go file change.
 
 ### Maintainance
 
