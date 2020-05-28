@@ -57,7 +57,7 @@ It includes:
 1. Update Go version in [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 1. Update and add additional build tools in [install.sh](install.sh).
 1. Configure linters via [.golangci.yml](.golangci.yml).
-1. Develop Make targets in [Makefile](Makefile) and assosiated tasks in [.vscode/tasks.json](.vscode/tasks.json).
+1. Develop Make targets in [Makefile](Makefile).
 
 Notable files:
 
