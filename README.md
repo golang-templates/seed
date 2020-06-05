@@ -76,20 +76,7 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-However, changing to any other CI server should be very simple, because this repository uses Docker to run CI build to make the transition easy.
-
-For [CircleCI](https://circleci.com/docs/2.0/executor-types/#using-machine) create `.circleci/config.yml` file:
-
-```yml
-version: 2.1
-jobs:
-  build:
-    machine:
-      image: ubuntu-1604:201903-01
-    steps:
-      - checkout
-      - run: make docker run="make all"
-```
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
 
 ## Contributing
 
