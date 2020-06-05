@@ -28,29 +28,9 @@ It includes:
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Change [LICENSE](LICENSE) and [README.md](README.md).
 
-### Setup Development Environment
-
-#### Visual Studio Code - Bare-metal
-
-1. Install [Go](https://golang.org/doc/install) and [Go extension](https://code.visualstudio.com/docs/languages/go).
-1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
-
-**Make on Windows:** Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
-
-#### Visual Studio Code - Development Container
-
-1. [Setup Development inside a Container](https://code.visualstudio.com/docs/remote/containers#_getting-started).
-1. Visual Studio Code inside Container: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
-
-#### Visual Studio Code - SSH
-
-1. [Setup Remote Development using SSH](https://code.visualstudio.com/docs/remote/ssh#_getting-started).
-1. On remote machine: install [Go](https://golang.org/doc/install) and [Go extension](https://code.visualstudio.com/docs/languages/go).
-1. Visual Studio Code: `View` → `Command Pallete... (F1)` → Select `Go: Install/Update Tools`.
-
 ### Build
 
-- Terminal: `make` to get help for make target.
+- Terminal: `make` to get help for make targets.
 - Terminal: `make all` to execute a full build.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
 
@@ -77,6 +57,10 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
 However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
+
+### How can I use Make on Windows
+
+Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
 ## Contributing
 
