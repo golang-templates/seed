@@ -2,11 +2,11 @@
 
 .PHONY: all
 all: ## full build
-all: clean install build fmt lint test
+all: clean install build fmt lint test release
 
 .PHONY: dev
 dev: ## fast build
-dev: install build fmt lint-fast test
+dev: build fmt lint-fast test
 
 .PHONY: clean
 clean: ## go clean
@@ -42,6 +42,11 @@ lint-fast: ## golangci-lint --fast
 test: ## go test with race detector and code covarage
 	$(call print-target)
 	go test -race -covermode=atomic ./...
+
+.PHONY: release
+release: ## goreleaser --snapshot --skip-publish --rm-dist
+	$(call print-target)
+	goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make all"
