@@ -20,6 +20,8 @@ It includes:
 
 `Star` this repository if you find it valuable and worth maintaining.
 
+`Watch` this repository to get notified about new releases, issues, etc.
+
 ## Usage
 
 1. Click the `Use this template` button (alt. clone or download this repository).
@@ -54,21 +56,16 @@ It includes:
 
 ### Maintainance
 
-1. `Watch` this repository to get notified about new releases, issues, etc.
-1. Update Go version in [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
-1. Update and add additional build tools in [install.sh](install.sh).
-1. Configure linters via [.golangci.yml](.golangci.yml).
-1. Update release configuration in [.goreleaser.yml](.goreleaser.yml).
-1. Develop Make targets in [Makefile](Makefile).
+Remember to update Go version in [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
-
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
-- [.github](.github/workflows/build.yml) - GitHub Action workflow (CI build)
+- [.github/workflows](.github/workflows) - GitHub Actions workflows
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - GolangCI-Lint configuration
+- [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
 - [install.sh](install.sh) - build tools installation script
-- [Makefile](Makefile) - Make targets used in [CI build](.github/workflows/build.yml) and [.vscode/tasks.json](.vscode/tasks.json)
+- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
 
 ## FAQ
 
