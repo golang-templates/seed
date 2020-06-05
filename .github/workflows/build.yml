@@ -1,5 +1,10 @@
 name: build
-on: push
+
+on:
+  push:
+    branches:
+      - '*'
+
 jobs:
   ci-build:
     runs-on: ubuntu-latest

@@ -15,7 +15,8 @@ It includes:
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
-- build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [GitHub Actions](https://github.com/features/actions).
+- build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [GitHub Actions](https://github.com/features/actions),
+- releasing using [GoReleaser](https://github.com/goreleaser/goreleaser).
 
 `Star` this repository if you find it valuable and worth maintaining.
 
@@ -57,6 +58,7 @@ It includes:
 1. Update Go version in [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 1. Update and add additional build tools in [install.sh](install.sh).
 1. Configure linters via [.golangci.yml](.golangci.yml).
+1. Update release configuration in [.goreleaser.yml](.goreleaser.yml).
 1. Develop Make targets in [Makefile](Makefile).
 
 Notable files:
