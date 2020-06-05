@@ -13,6 +13,6 @@ jobs:
       - name: Unshallow
         run: git fetch --prune --unshallow
       - name: Release
-        run: make docker args="-e GITHUB_TOKEN" run="make all publish"
+        run: make docker args="-e CI -e GITHUB_TOKEN" run="make all publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
