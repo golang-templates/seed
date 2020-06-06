@@ -36,7 +36,7 @@ It includes:
 
 ### Maintainance
 
-Remember to update Go version in [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
+Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
