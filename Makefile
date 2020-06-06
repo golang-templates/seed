@@ -48,12 +48,6 @@ release: ## goreleaser --snapshot --skip-publish --rm-dist
 	$(call print-target)
 	goreleaser --snapshot --skip-publish --rm-dist
 
-.PHONY: publish
-publish:
-	$(call print-target)
-	@test -n "$(CI)" || (echo "$@ should be running only on CI Server" && exit 1)
-	goreleaser --rm-dist
-
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make all"
 	docker run --rm -v $(CURDIR):/app $(args) golang:1.14 sh -c "cd /app && $(run)"
