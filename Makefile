@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: clean install build fmt lint test release
+all: install build fmt lint test release
 
 .PHONY: dev
 dev: ## fast build
