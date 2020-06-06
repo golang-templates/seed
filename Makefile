@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: clean install build fmt lint test release
+all: install build fmt lint test release
 
 .PHONY: dev
 dev: ## fast build
@@ -47,12 +47,6 @@ test: ## go test with race detector and code covarage
 release: ## goreleaser --snapshot --skip-publish --rm-dist
 	$(call print-target)
 	goreleaser --snapshot --skip-publish --rm-dist
-
-.PHONY: publish
-publish:
-	$(call print-target)
-	@test -n "$(CI)" || (echo "$@ should be running only on CI Server" && exit 1)
-	goreleaser --rm-dist
 
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make all"
