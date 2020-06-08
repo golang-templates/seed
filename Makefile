@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: install build fmt lint test release
+all: install generate build mod-tidy fmt lint test release diff
 
 .PHONY: dev
 dev: ## fast build
@@ -18,15 +18,28 @@ install: ## install build tools
 	$(call print-target)
 	./install.sh
 
+.PHONY: generate
+generate: ## go generate
+	$(call print-target)
+	go generate ./...
+
 .PHONY: build
 build: ## go build
 	$(call print-target)
 	go build ./...
 
+.PHONY: mod-tidy
+mod-tidy: ## go mod tidy
+	$(call print-target)
+	go mod tidy
+	git diff --exit-code -- go.mod go.sum
+
 .PHONY: fmt
 fmt: ## goimports
 	$(call print-target)
-	goimports -l -w .
+	@# ignore the goimports exit code as the generated code may be reformated
+	goimports -l -w . || true
+	git diff --exit-code
 
 .PHONY: lint
 lint: ## golangci-lint
@@ -47,6 +60,11 @@ test: ## go test with race detector and code covarage
 release: ## goreleaser --snapshot --skip-publish --rm-dist
 	$(call print-target)
 	goreleaser --snapshot --skip-publish --rm-dist
+
+.PHONY: diff
+diff: ## git diff
+	$(call print-target)
+	git diff --exit-code
 
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make all"
