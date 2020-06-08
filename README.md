@@ -14,7 +14,7 @@ It includes:
 
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
-- linting with [GolangCI-Lint](https://github.com/golangci/golangci-lint),
+- linting with [golangci-lint](https://github.com/golangci/golangci-lint),
 - build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [GitHub Actions](https://github.com/features/actions),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser).
 
@@ -42,7 +42,7 @@ Notable files:
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
 - [.github/workflows](.github/workflows) - GitHub Actions workflows
 - [.vscode](.vscode) - Visual Studio Code configuration files
-- [.golangci.yml](.golangci.yml) - GolangCI-Lint configuration
+- [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
 - [install.sh](install.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
