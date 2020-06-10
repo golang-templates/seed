@@ -50,6 +50,10 @@ Notable files:
 
 ## FAQ
 
+### Why Visual Studio Code editor configuration
+
+Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). Yyou can always remove the [.vscode](.vscode) directory and update [.gitignore](.gitignore) if it really does not help you.
+
 ### Why nothing for GoLand
 
 The maintainer does not use GoLand. Fell free to create a pull request for [#2](https://github.com/golang-templates/seed/issues/2).
@@ -57,7 +61,7 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. You can also use the `docker` make target to run the build inside a docker container.
 
 ### How can I use Make on Windows
 
