@@ -52,7 +52,7 @@ Notable files:
 
 ### Why Visual Studio Code editor configuration
 
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). Yyou can always remove the [.vscode](.vscode) directory and update [.gitignore](.gitignore) if it really does not help you.
+Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). You can always remove the [.vscode](.vscode) directory and update [.gitignore](.gitignore) if it really does not help you.
 
 ### Why nothing for GoLand
 
