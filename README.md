@@ -1,8 +1,9 @@
 # Go Repository Template
 
-[![Build Status](https://github.com/golang-templates/seed/workflows/build/badge.svg)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild)
-[![GoDoc](https://godoc.org/github.com/golang-templates/seed?status.svg)](https://godoc.org/github.com/golang-templates/seed)
-[![GitHub Release](https://img.shields.io/github/release/golang-templates/seed.svg)](https://github.com/golang-templates/seed/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/golang-templates/seed)](https://github.com/golang-templates/seed/releases)
+[![go.dev](https://img.shields.io/badge/go.dev-reference-blue.svg)](https://pkg.go.dev/github.com/golang-templates/seed)
+[![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
+[![Build Status](https://img.shields.io/github/workflow/status/golang-templates/seed/build)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amaster)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
