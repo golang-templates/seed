@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: install generate build mod-tidy fmt lint test diff
+all: install generate build lint test mod-tidy diff
 
 .PHONY: dev
 dev: ## fast build
@@ -28,18 +28,10 @@ build: ## go build
 	$(call print-target)
 	go build -o /dev/null ./...
 
-.PHONY: mod-tidy
-mod-tidy: ## go mod tidy
-	$(call print-target)
-	go mod tidy
-	git diff --exit-code -- go.mod go.sum
-
 .PHONY: fmt
 fmt: ## goimports
 	$(call print-target)
-	@# ignore the goimports exit code as the generated code may be reformated
 	goimports -l -w . || true
-	git diff --exit-code
 
 .PHONY: lint
 lint: ## golangci-lint
@@ -56,15 +48,37 @@ test: ## go test with race detector and code covarage
 	$(call print-target)
 	go test -race -covermode=atomic ./...
 
+.PHONY: mod-tidy
+mod-tidy: ## go mod tidy
+	$(call print-target)
+	go mod tidy
+	git diff --exit-code -- go.mod go.sum
+
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
 	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
+.PHONY: run
+run: ## go run
+	$(call print-target)
+	go run .
+
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make all"
-	docker run --rm -v $(CURDIR):/app $(args) golang:1.14 sh -c "cd /app && $(run)"
+	docker run --rm \
+		-v $(CURDIR):/repo $(args) \
+		-w /repo \
+		golang:1.14 $(run)
+
+.PHONY: build-snapshot
+build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
+	docker run --rm \
+		-v /var/run/docker.sock:/var/run/docker.sock \
+		-v $(CURDIR):/repo \
+		-w /repo \
+		goreleaser/goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: help
 help:
