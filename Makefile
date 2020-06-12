@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: install generate build mod-tidy fmt lint test release diff
+all: install generate build mod-tidy fmt lint test diff
 
 .PHONY: dev
 dev: ## fast build
@@ -55,11 +55,6 @@ lint-fast: ## golangci-lint --fast
 test: ## go test with race detector and code covarage
 	$(call print-target)
 	go test -race -covermode=atomic ./...
-
-.PHONY: release
-release: ## goreleaser --snapshot --skip-publish --rm-dist
-	$(call print-target)
-	goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: diff
 diff: ## git diff
