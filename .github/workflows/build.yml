@@ -12,17 +12,21 @@ jobs:
   ci-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-go@v2
-        with:
-          go-version: 1.14
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
       - uses: actions/cache@v2
         with:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.14
       - name: Build
         run: make all
       - uses: goreleaser/goreleaser-action@v2
         with:
           version: v0.138.0
           args: release --snapshot --skip-publish
+      - uses: actions/upload-artifact@v2
+        with:
+          path: dist
