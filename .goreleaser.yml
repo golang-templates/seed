@@ -5,6 +5,8 @@ builds:
     - darwin
     - linux
     - windows
+  goarch:
+    - amd64
 archives:
 - format_overrides:
     - goos: windows
