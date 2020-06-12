@@ -67,6 +67,26 @@ However, changing to any other CI server should be very simple, because this rep
 
 Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
+### How can I create a library instead of an application
+
+You can change the [.goreleaser.yml](.goreleaser.yml) to contain:
+
+```yaml
+build:
+  skip: true
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+release:
+  github:
+  prerelease: auto
+```
+
+Alternativly you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
+
 ## Contributing
 
 Simply create an issue or a pull request.
