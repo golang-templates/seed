@@ -27,15 +27,16 @@ It includes:
 
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
+1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Change [LICENSE](LICENSE) and [README.md](README.md).
 
-### Build
+## Build
 
 - Terminal: `make` to get help for make targets.
 - Terminal: `make all` to execute a full build.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
 
-### Maintainance
+## Maintainance
 
 Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
@@ -45,6 +46,7 @@ Notable files:
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
+- [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image
 - [install.sh](install.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
 

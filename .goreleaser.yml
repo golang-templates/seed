@@ -28,4 +28,4 @@ dockers:
     - "--label=org.opencontainers.image.name={{.ProjectName}}"
     - "--label=org.opencontainers.image.revision={{.FullCommit}}"
     - "--label=org.opencontainers.image.version={{.Version}}"
-    - "--build-arg=BINARY={{ .ProjectName }}"
+    - "--label=org.opencontainers.image.source={{.GitURL}}"
