@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: install generate build lint test mod-tidy diff
+all: install generate build fmt lint test mod-tidy diff
 
 .PHONY: dev
 dev: ## fast build
@@ -31,7 +31,7 @@ build: ## go build
 .PHONY: fmt
 fmt: ## goimports
 	$(call print-target)
-	goimports -l -w . || true
+	goimports -l -w -local github.com/golang-templates/seed . || true
 
 .PHONY: lint
 lint: ## golangci-lint
@@ -52,7 +52,6 @@ test: ## go test with race detector and code covarage
 mod-tidy: ## go mod tidy
 	$(call print-target)
 	go mod tidy
-	git diff --exit-code -- go.mod go.sum
 
 .PHONY: diff
 diff: ## git diff
