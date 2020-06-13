@@ -74,12 +74,6 @@ You can change the [.goreleaser.yml](.goreleaser.yml) to contain:
 ```yaml
 build:
   skip: true
-changelog:
-  sort: asc
-  filters:
-    exclude:
-    - '^docs:'
-    - '^test:'
 release:
   github:
   prerelease: auto
