@@ -19,9 +19,9 @@ dockers:
     - "{{ .ProjectName }}"
     image_templates:
     - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:latest"
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}"
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}"
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:v{{ .Major }}"
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:v{{ .Major }}.{{ .Minor }}"
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
     build_flag_templates:
     - "--pull"
     - "--label=org.opencontainers.image.created={{.Date}}"
