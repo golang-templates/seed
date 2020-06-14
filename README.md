@@ -47,7 +47,7 @@ Notable files:
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
 - [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image
-- [install.sh](install.sh) - build tools installation script
+- [install-tools.sh](install-tools.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
 
 ## FAQ
@@ -68,6 +68,22 @@ However, changing to any other CI server should be very simple, because this rep
 ### How can I use Make on Windows
 
 Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+
+### How can I create an application installation script
+
+1. Install [GoDownloader](https://github.com/goreleaser/godownloader)
+1. Execute: 
+
+```bash
+godownloader --repo=your_org/repo_name > ./install.sh
+```
+
+3. Push `install.sh` to your repository.
+1. Add installation instructions to your `README.md` e.g.:
+
+```bash
+curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/master/install.sh | sh -s -- -b /usr/local/bin
+```
 
 ### How can I create a library instead of an application
 
