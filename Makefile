@@ -16,7 +16,7 @@ clean: ## go clean
 .PHONY: install
 install: ## install build tools
 	$(call print-target)
-	./install.sh
+	./install-tools.sh
 
 .PHONY: generate
 generate: ## go generate
