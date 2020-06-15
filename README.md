@@ -27,7 +27,6 @@ It includes:
 
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Change [LICENSE](LICENSE) and [README.md](README.md).
 
 ## Build
@@ -46,7 +45,6 @@ Notable files:
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
-- [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image
 - [install-tools.sh](install-tools.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
 
@@ -63,11 +61,16 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. You can also use the `docker` make target to run the build inside a docker container.
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. You can also use the `docker` or `release` make target to run the build or release using a docker container.
 
 ### How can I use Make on Windows
 
 Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+
+### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
+
+Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
+
 
 ### How can I create an application installation script
 
