@@ -61,7 +61,7 @@ The maintainer does not use GoLand. Fell free to create a pull request for [#2](
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. You can also use the `docker` or `release` make target to run the build or release using a docker container.
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. You can also use the `docker` make target to run the build using a docker container.
 
 ### How can I use Make on Windows
 
