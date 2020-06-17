@@ -1,3 +1,4 @@
+// Application which greets you.
 package main
 
 import "fmt"
