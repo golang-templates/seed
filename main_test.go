@@ -1,4 +1,3 @@
-//nolint:testpackage // not possible otherwise
 package main
 
 import (
