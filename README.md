@@ -17,6 +17,7 @@ It includes:
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
 - build automation via [Make](https://www.gnu.org/software/make), [GitHub Actions](https://github.com/features/actions),
+- auto-tagging via [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) GitHub Action,
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser).
 
 `Star` this repository if you find it valuable and worth maintaining.
@@ -35,6 +36,15 @@ It includes:
 - Terminal: `make` to get help for make targets.
 - Terminal: `make all` to execute a full build.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
+
+## Release
+
+The release workflow is triggered each time a tag with `v` prefix is pushed.
+
+This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. It automatically triggers the release workflow.
+
+- Add `#minor` to your commit message to bump minor version.
+- Add `#major` to your commit message to bump major version. DANGER! Use it with caution and make sure you understand the consequences. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog][https://blog.golang.org/v2-go-modules].
 
 ## Maintainance
 

@@ -28,3 +28,10 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.22.0
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+          DEFAULT_BUMP: patch
