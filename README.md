@@ -16,7 +16,7 @@ It includes:
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- build automation via [Make](https://www.gnu.org/software/make), [Docker](https://docs.docker.com/engine), [GitHub Actions](https://github.com/features/actions),
+- build automation via [Make](https://www.gnu.org/software/make), [GitHub Actions](https://github.com/features/actions),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser).
 
 `Star` this repository if you find it valuable and worth maintaining.
@@ -27,7 +27,8 @@ It includes:
 
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Change [LICENSE](LICENSE) and [README.md](README.md).
+1. Rename folder `cmd/seed` to `cmd/repo_name` and update [.goreleaser.yml](.goreleaser.yml).
+1. Update [LICENSE](LICENSE) and [README.md](README.md).
 
 ## Build
 
@@ -52,7 +53,9 @@ Notable files:
 
 ### Why Visual Studio Code editor configuration
 
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). You can always remove the [.vscode](.vscode) directory and update [.gitignore](.gitignore) if it really does not help you.
+Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). 
+
+You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) directories if it really does not help you.
 
 ### Why nothing for GoLand
 
