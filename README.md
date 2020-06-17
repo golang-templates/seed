@@ -45,8 +45,8 @@ Notable files:
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
-- [install-tools.sh](install-tools.sh) - build tools installation script
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
+- [tools.go](tools.go) - build tools 
 
 ## FAQ
 

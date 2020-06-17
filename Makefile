@@ -2,7 +2,7 @@
 
 .PHONY: all
 all: ## full build
-all: install generate build fmt lint test mod-tidy diff
+all: install generate build fmt lint test mod-tidy build-snapshot diff
 
 .PHONY: dev
 dev: ## fast build
@@ -16,7 +16,9 @@ clean: ## go clean
 .PHONY: install
 install: ## install build tools
 	$(call print-target)
-	./install-tools.sh
+	go install github.com/golangci/golangci-lint/cmd/golangci-lint
+	go install github.com/goreleaser/goreleaser
+	go install golang.org/x/tools/cmd/goimports
 
 .PHONY: generate
 generate: ## go generate
@@ -53,11 +55,20 @@ mod-tidy: ## go mod tidy
 	$(call print-target)
 	go mod tidy
 
+.PHONY: build-snapshot
+build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
+	goreleaser --snapshot --skip-publish --rm-dist
+
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
 	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
+
+.PHONY: release
+release: ## goreleaser release
+	go install github.com/goreleaser/goreleaser
+	goreleaser release
 
 .PHONY: run
 run: ## go run
@@ -70,14 +81,6 @@ docker: ## run in golang container, example: make docker run="make all"
 		-v $(CURDIR):/repo $(args) \
 		-w /repo \
 		golang:1.14 $(run)
-
-.PHONY: build-snapshot
-build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
-	docker run --rm \
-		-v /var/run/docker.sock:/var/run/docker.sock \
-		-v $(CURDIR):/repo \
-		-w /repo \
-		goreleaser/goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: help
 help:
