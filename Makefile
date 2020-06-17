@@ -66,9 +66,9 @@ diff: ## git diff
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
 .PHONY: release
-release: ## goreleaser release
+release: ## goreleaser --rm-dist
 	go install github.com/goreleaser/goreleaser
-	goreleaser release
+	goreleaser --rm-dist
 
 .PHONY: run
 run: ## go run
