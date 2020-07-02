@@ -70,6 +70,8 @@ You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) 
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
+[Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
+
 However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. 
 
 You can also use the `docker` make target to run the build using a docker container.
