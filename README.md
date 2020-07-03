@@ -37,7 +37,6 @@ It includes:
 ## Build
 
 - Terminal: `make` to get help for make targets.
-- Terminal: `make all` to execute a full build.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
 
 ## Release
