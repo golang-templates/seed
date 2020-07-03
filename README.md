@@ -13,12 +13,15 @@ This is a GitHub repository template for Go. It has been created for ease-of-use
 
 It includes:
 
-- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
+- continous integration via [GitHub Actions](https://github.com/features/actions),
+- build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- build automation via [Make](https://www.gnu.org/software/make), [GitHub Actions](https://github.com/features/actions),
+- unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
 - auto-tagging via [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) GitHub Action,
-- releasing using [GoReleaser](https://github.com/goreleaser/goreleaser).
+- releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
+- depdendencies scanning and vulnerabilities alerting thanks to [Dependabot](https://dependabot.com/go/),
+- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
 
 `Star` this repository if you find it valuable and worth maintaining.
 
@@ -53,6 +56,7 @@ Remember to update Go version in [.github/workflows](.github/workflows), [Makefi
 Notable files:
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
 - [.github/workflows](.github/workflows) - GitHub Actions workflows
+- [github/dependabot.yml] - Dependabot configuration
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
@@ -114,6 +118,10 @@ release:
 ```
 
 Alternativly you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
+
+### Why the code coverage results are not accurate
+
+By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
 ## Contributing
 
