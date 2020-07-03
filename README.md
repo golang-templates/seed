@@ -44,7 +44,7 @@ It includes:
 
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
-This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. It automatically triggers the release workflow.
+This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. Therfore, it automatically triggers the release workflow as well.
 
 - Add `#minor` to your commit message to bump minor version.
 - Add `#major` to your commit message to bump major version. DANGER! Use it with caution and make sure you understand the consequences. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
@@ -56,7 +56,7 @@ Remember to update Go version in [.github/workflows](.github/workflows), [Makefi
 Notable files:
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
 - [.github/workflows](.github/workflows) - GitHub Actions workflows
-- [github/dependabot.yml] - Dependabot configuration
+- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
