@@ -48,7 +48,7 @@ lint-fast: ## golangci-lint --fast
 .PHONY: test
 test: ## go test with race detector and code covarage
 	$(call print-target)
-	go test -race -coverpkg=./... -covermode=atomic -coverprofile=coverage.out ./...
+	go test -race -covermode=atomic -coverprofile=coverage.out ./...
 	go tool cover -html=coverage.out -o coverage.html
 
 .PHONY: mod-tidy
