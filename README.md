@@ -122,6 +122,32 @@ Alternativly you can completly remove the usage of GoReleaser if you prefer hand
 
 By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
+### How to integratee with [Codecov](codecov)
+
+1. Sing up on [CodeCov](https://codecov.io/) and setup your repository.
+1. Additionally consider configuring [Codecov GitHub Application](https://github.com/apps/codecov) for better integration.
+1. Add [codecov-action](https://github.com/codecov/codecov-action) to [.github/workflows/build.yml](.github/workflows/build.yml):
+
+```yaml
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.10
+        with:
+          file: ./coverage.out
+```
+
+4. Add a badge in [README.md](README.md):
+
+```md
+[![codecov](https://codecov.io/gh/your_org/repo_name/branch/master/graph/badge.svg)](https://codecov.io/gh/your_org/repo_name)
+```
+
+Codecov integration example:
+- [repository](https://github.com/pellared/codecov-integration-example).
+- [coverage report](https://codecov.io/gh/pellared/codecov-integration-example/src/master/cmd/seed/main.go),
+- [pull request comment](https://github.com/pellared/codecov-integration-example/pull/3#issuecomment-653814033).
+
+Read [Codecov docs](https://docs.codecov.io/docs/quick-start) for further information and troubleshooting.
+
 ## Contributing
 
 Simply create an issue or a pull request.
