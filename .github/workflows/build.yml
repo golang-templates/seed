@@ -31,7 +31,7 @@ jobs:
           path: coverage.*
       - id: git-auto-tag
         name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.22.0
+        uses: anothrNick/github-tag-action@1.23.0
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
