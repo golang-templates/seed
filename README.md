@@ -13,12 +13,15 @@ This is a GitHub repository template for Go. It has been created for ease-of-use
 
 It includes:
 
-- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support,
+- continous integration via [GitHub Actions](https://github.com/features/actions),
+- build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- build automation via [Make](https://www.gnu.org/software/make), [GitHub Actions](https://github.com/features/actions),
+- unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
 - auto-tagging via [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) GitHub Action,
-- releasing using [GoReleaser](https://github.com/goreleaser/goreleaser).
+- releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
+- depdendencies scanning and vulnerabilities alerting thanks to [Dependabot](https://dependabot.com/go/),
+- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
 
 `Star` this repository if you find it valuable and worth maintaining.
 
@@ -34,14 +37,13 @@ It includes:
 ## Build
 
 - Terminal: `make` to get help for make targets.
-- Terminal: `make all` to execute a full build.
 - Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
 
 ## Release
 
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
-This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. It automatically triggers the release workflow.
+This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. Therfore, it automatically triggers the release workflow as well.
 
 - Add `#minor` to your commit message to bump minor version.
 - Add `#major` to your commit message to bump major version. DANGER! Use it with caution and make sure you understand the consequences. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
@@ -53,6 +55,7 @@ Remember to update Go version in [.github/workflows](.github/workflows), [Makefi
 Notable files:
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
 - [.github/workflows](.github/workflows) - GitHub Actions workflows
+- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration
 - [.vscode](.vscode) - Visual Studio Code configuration files
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
@@ -70,6 +73,8 @@ You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) 
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
+[Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
+
 However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. 
 
 You can also use the `docker` make target to run the build using a docker container.
@@ -112,6 +117,10 @@ release:
 ```
 
 Alternativly you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
+
+### Why the code coverage results are not accurate
+
+By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
 ## Contributing
 

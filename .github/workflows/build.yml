@@ -24,6 +24,11 @@ jobs:
           go-version: 1.14
       - name: Build
         run: make all
+      - name: Upload coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage.*
       - id: git-auto-tag
         name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.22.0
@@ -39,7 +44,8 @@ jobs:
         run: make release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-artifact@v2
+      - name: Upload dist
+        uses: actions/upload-artifact@v2
         with:
           name: dist
           path: dist
