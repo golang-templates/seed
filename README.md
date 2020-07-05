@@ -18,7 +18,6 @@ It includes:
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
 - unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
-- auto-tagging via [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) GitHub Action,
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - depdendencies scanning and vulnerabilities alerting thanks to [Dependabot](https://dependabot.com/go/),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
@@ -43,10 +42,7 @@ It includes:
 
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
-This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. Therfore, it automatically triggers the release workflow as well.
-
-- Add `#minor` to your commit message to bump minor version.
-- Add `#major` to your commit message to bump major version. DANGER! Use it with caution and make sure you understand the consequences. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
+_CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
 
 ## Maintainance
 
@@ -60,7 +56,8 @@ Notable files:
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
-- [tools.go](tools.go) - build tools 
+- [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
+- [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
 
 ## FAQ
 
@@ -121,6 +118,17 @@ Alternativly you can completly remove the usage of GoReleaser if you prefer hand
 ### Why the code coverage results are not accurate
 
 By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
+
+### How to automate generating git tags for next release version
+
+Auto-tagging can be done e.g. by using GitHub Actions like:
+
+- [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump),
+- [bumpr](https://github.com/marketplace/actions/bumpr-bump-version-when-merging-pull-request-with-specific-labels),
+- [Increment Semantic Version](https://github.com/marketplace/actions/increment-semantic-version),
+- [Github Tag](https://github.com/marketplace/actions/github-tag).
+
+There are many possibilites how it can be achieved. Creating release tags manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with `v` prefix is pushed.
 
 ## Contributing
 

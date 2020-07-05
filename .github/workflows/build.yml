@@ -29,21 +29,6 @@ jobs:
         with:
           name: coverage
           path: coverage.*
-      - id: git-auto-tag
-        name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.23.0
-        if: github.ref == 'refs/heads/master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
-          DEFAULT_BUMP: patch
-      - run: git tag ${{ steps.git-auto-tag.outputs.new_tag }}
-        if: github.ref == 'refs/heads/master'
-      - name: Release
-        if: github.ref == 'refs/heads/master'
-        run: make release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload dist
         uses: actions/upload-artifact@v2
         with:
