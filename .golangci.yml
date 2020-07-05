@@ -3,6 +3,8 @@ linters-settings:
     local-prefixes: github.com/golang-templates/seed
   golint:
     min-confidence: 0
+  govet:
+    check-shadowing: true
   misspell:
     locale: US
   nolintlint:
@@ -33,6 +35,7 @@ linters:
     - depguard
     - dogsled
     - dupl
+    - exportloopref
     - funlen
     - gochecknoglobals
     - gochecknoinits
@@ -44,6 +47,7 @@ linters:
     - godox
     - goerr113
     - gofmt
+    - gofumpt
     - goimports
     - golint
     - gomnd
@@ -56,16 +60,20 @@ linters:
     - misspell
     - nakedret
     - nestif
+    - noctx
     - nolintlint
     - prealloc
     - rowserrcheck
     - scopelint
+    - sqlclosecheck
     - stylecheck
-    # - testpackage
     - unconvert
     - unparam
     - whitespace
     - wsl
+    # don't enable:
+    # - go-header
+    # - testpackage
 
 issues:
   # enable issues excluded by default 
