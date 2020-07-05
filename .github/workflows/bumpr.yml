@@ -1,0 +1,12 @@
+name: bumpr
+on:
+  pull_request:
+    types:
+      - labeled
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: haya14busa/action-bumpr@v1.0.0

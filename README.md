@@ -43,10 +43,9 @@ It includes:
 
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
-This repo uses [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump) for auto tagging on master branch. Therfore, it automatically triggers the release workflow as well.
+This repo uses [bumpr](https://github.com/marketplace/actions/bumpr-bump-version-when-merging-pull-request-with-specific-labels) to bump semantic version tag on merging Pull Requests with specific lables: `bump:major`, `bump:minor`, `bump:patch`.
 
-- Add `#minor` to your commit message to bump minor version.
-- Add `#major` to your commit message to bump major version. DANGER! Use it with caution and make sure you understand the consequences. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
+DANGER! When bumping major tag make sure you understand its consequences. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
 
 ## Maintainance
 
