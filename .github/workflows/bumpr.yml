@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: haya14busa/action-bumpr@v1.0.0
+      - uses: haya14busa/action-bumpr@v1
