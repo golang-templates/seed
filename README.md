@@ -119,16 +119,43 @@ Alternativly you can completly remove the usage of GoReleaser if you prefer hand
 
 By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
+### How to integratee with [Codecov](codecov)
+
+1. Sing up on [CodeCov](https://codecov.io/) and setup your repository.
+1. Additionally consider configuring [Codecov GitHub Application](https://github.com/apps/codecov) for better integration.
+1. Add [codecov-action](https://github.com/codecov/codecov-action) to [.github/workflows/build.yml](.github/workflows/build.yml):
+
+```yaml
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.10
+        with:
+          file: ./coverage.out
+```
+
+4. Add a badge in [README.md](README.md):
+
+```md
+[![codecov](https://codecov.io/gh/your_org/repo_name/branch/master/graph/badge.svg)](https://codecov.io/gh/your_org/repo_name)
+```
+
+Codecov integration example:
+- [repository](https://github.com/pellared/codecov-integration-example).
+- [coverage report](https://codecov.io/gh/pellared/codecov-integration-example/src/master/cmd/seed/main.go),
+- [pull request comment](https://github.com/pellared/codecov-integration-example/pull/3#issuecomment-653814033).
+
+Read [Codecov docs](https://docs.codecov.io/docs/quick-start) for further information and troubleshooting.
+
 ### How to automate generating git tags for next release version
 
-Auto-tagging can be done e.g. by using GitHub Actions like:
+Auto-tagging can be done in many ways e.g. by using GitHub Actions like:
 
 - [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump),
 - [bumpr](https://github.com/marketplace/actions/bumpr-bump-version-when-merging-pull-request-with-specific-labels),
 - [Increment Semantic Version](https://github.com/marketplace/actions/increment-semantic-version),
 - [Github Tag](https://github.com/marketplace/actions/github-tag).
 
-There are many possibilites how it can be achieved. Creating release tags manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with `v` prefix is pushed.
+However, creating a release tag manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with `v` prefix is pushed.
+
 
 ## Contributing
 
