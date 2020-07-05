@@ -1,8 +1,8 @@
 .DEFAULT_GOAL := help
 
-.PHONY: all
-all: ## full build
-all: install generate build fmt lint test mod-tidy build-snapshot diff
+.PHONY: ci
+all: ## CI build
+all: install generate build lint test mod-tidy build-snapshot diff
 
 .PHONY: dev
 dev: ## fast build
@@ -77,7 +77,7 @@ run: ## go run
 	go run .
 
 .PHONY: docker
-docker: ## run in golang container, example: make docker run="make all"
+docker: ## run in golang container, example: make docker run="make ci"
 	docker run --rm \
 		-v $(CURDIR):/repo $(args) \
 		-w /repo \
