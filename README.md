@@ -19,7 +19,7 @@ It includes:
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
 - unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
-- depdendencies scanning and vulnerabilities alerting thanks to [Dependabot](https://dependabot.com/go/),
+- dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
 
 `Star` this repository if you find it valuable and worth maintaining.
@@ -49,13 +49,13 @@ _CAUTION_: Make sure to understand the consequences before you bump the major ve
 Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
-- [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
-- [.github/workflows](.github/workflows) - GitHub Actions workflows
-- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration
-- [.vscode](.vscode) - Visual Studio Code configuration files
-- [.golangci.yml](.golangci.yml) - golangci-lint configuration
-- [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
-- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
+- [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration,
+- [.github/workflows](.github/workflows) - GitHub Actions workflows,
+- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
+- [.vscode](.vscode) - Visual Studio Code configuration files,
+- [.golangci.yml](.golangci.yml) - golangci-lint configuration,
+- [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
+- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),
 - [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
 - [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
 
@@ -87,7 +87,7 @@ Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well 
 
 ### How can I create an application installation script
 
-1. Install [GoDownloader](https://github.com/goreleaser/godownloader)
+1. Install [GoDownloader](https://github.com/goreleaser/godownloader).
 1. Execute: 
 
 ```bash
@@ -113,7 +113,7 @@ release:
   prerelease: auto
 ```
 
-Alternativly you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
+Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
 
 ### Why the code coverage results are not accurate
 
@@ -139,7 +139,7 @@ By default `go test` records code coverage for the package that is currently tes
 ```
 
 Codecov integration example:
-- [repository](https://github.com/pellared/codecov-integration-example).
+- [repository](https://github.com/pellared/codecov-integration-example),
 - [coverage report](https://codecov.io/gh/pellared/codecov-integration-example/src/master/cmd/seed/main.go),
 - [pull request comment](https://github.com/pellared/codecov-integration-example/pull/3#issuecomment-653814033).
 
@@ -155,7 +155,6 @@ Auto-tagging can be done in many ways e.g. by using GitHub Actions like:
 - [Github Tag](https://github.com/marketplace/actions/github-tag).
 
 However, creating a release tag manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with `v` prefix is pushed.
-
 
 ## Contributing
 
