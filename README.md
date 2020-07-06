@@ -49,13 +49,13 @@ _CAUTION_: Make sure to understand the consequences before you bump the major ve
 Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
-- [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration
-- [.github/workflows](.github/workflows) - GitHub Actions workflows
-- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration
-- [.vscode](.vscode) - Visual Studio Code configuration files
-- [.golangci.yml](.golangci.yml) - golangci-lint configuration
-- [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration
-- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json)
+- [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration,
+- [.github/workflows](.github/workflows) - GitHub Actions workflows,
+- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
+- [.vscode](.vscode) - Visual Studio Code configuration files,
+- [.golangci.yml](.golangci.yml) - golangci-lint configuration,
+- [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
+- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),
 - [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
 - [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
 
@@ -87,7 +87,7 @@ Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well 
 
 ### How can I create an application installation script
 
-1. Install [GoDownloader](https://github.com/goreleaser/godownloader)
+1. Install [GoDownloader](https://github.com/goreleaser/godownloader).
 1. Execute: 
 
 ```bash
@@ -139,7 +139,7 @@ By default `go test` records code coverage for the package that is currently tes
 ```
 
 Codecov integration example:
-- [repository](https://github.com/pellared/codecov-integration-example).
+- [repository](https://github.com/pellared/codecov-integration-example),
 - [coverage report](https://codecov.io/gh/pellared/codecov-integration-example/src/master/cmd/seed/main.go),
 - [pull request comment](https://github.com/pellared/codecov-integration-example/pull/3#issuecomment-653814033).
 
