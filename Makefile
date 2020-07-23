@@ -58,6 +58,7 @@ mod-tidy: ## go mod tidy
 
 .PHONY: build-snapshot
 build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
+	$(call print-target)
 	goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: diff
@@ -68,13 +69,13 @@ diff: ## git diff
 
 .PHONY: release
 release: ## goreleaser --rm-dist
+	$(call print-target)
 	go install github.com/goreleaser/goreleaser
 	goreleaser --rm-dist
 
 .PHONY: run
 run: ## go run
-	$(call print-target)
-	go run .
+	@go run -race ./cmd/seed
 
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make ci"
