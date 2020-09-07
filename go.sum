@@ -396,6 +396,8 @@ github.com/goreleaser/goreleaser v0.141.0 h1:z36P4lO/1WvOmn3ljZkFKbvu7b+Cnn8d7OQ
 github.com/goreleaser/goreleaser v0.141.0/go.mod h1:nj0BBTO6WA3qC/rxFReu3a1bNiJIT/9drgYKAswfrRQ=
 github.com/goreleaser/goreleaser v0.142.0 h1:AVpq6UyylX0piGA/gzsfBmqaVx5656oU+FlplhY8gLI=
 github.com/goreleaser/goreleaser v0.142.0/go.mod h1:B+JD1cCHxp0nmWvNXJAm+qA4Hs5abIbVFGbi1DnwyTc=
+github.com/goreleaser/goreleaser v0.143.0 h1:O/oQFIdg/nGso0iQ7/W4J4aqsERWvkDhnFzcVcpIBOs=
+github.com/goreleaser/goreleaser v0.143.0/go.mod h1:/zq84GQ8WZFnspGTONdZO0Kgf5BzOD3CzufXyw+ut4A=
 github.com/goreleaser/nfpm v1.3.1 h1:I/maCwifLj1vZxeKHnYIyzVPt8Csvyil9xBphXfuyaA=
 github.com/goreleaser/nfpm v1.3.1/go.mod h1:w0p7Kc9TAUgWMyrub63ex3M2Mgw88M4GZXoTq5UCb40=
 github.com/goreleaser/nfpm v1.4.1 h1:paDjN0j6mVw7tQfoKTF2rTdo2QEtzij1AXpXHd/1JCY=
@@ -777,6 +779,8 @@ github.com/xanzy/go-gitlab v0.34.0 h1:Rom8X2ZleX5pVJaL5LojuCFHwOFuopNMK79N7WyxLA
 github.com/xanzy/go-gitlab v0.34.0/go.mod h1:sPLojNBn68fMUWSxIJtdVVIP8uSBYqesTfDUseX11Ug=
 github.com/xanzy/go-gitlab v0.36.0 h1:YSYC7Kh31bPtfJwMCa+cxoSymw2EJxvgXNi1B3IvwE8=
 github.com/xanzy/go-gitlab v0.36.0/go.mod h1:sPLojNBn68fMUWSxIJtdVVIP8uSBYqesTfDUseX11Ug=
+github.com/xanzy/go-gitlab v0.37.0 h1:Z/CQkjj5VwbWVYVL7S70kS/TFj5H/pJumV7xbJ0YUQ8=
+github.com/xanzy/go-gitlab v0.37.0/go.mod h1:sPLojNBn68fMUWSxIJtdVVIP8uSBYqesTfDUseX11Ug=
 github.com/xanzy/ssh-agent v0.2.1 h1:TCbipTQL2JiiCprBWx9frJ2eJlCYT00NmctrHxVAr70=
 github.com/xanzy/ssh-agent v0.2.1/go.mod h1:mLlQY/MoOhWBj+gOGMQkOeiEvkx+8pJSI+0Bx9h2kr4=
 github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 h1:nIPpBwaJSVYIxUFsDv3M8ofmx9yWTog9BfvIu0q41lo=
