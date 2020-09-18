@@ -119,9 +119,9 @@ Alternatively, you can completly remove the usage of GoReleaser if you prefer ha
 
 By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
-### How to integrate with [Codecov](codecov)
+### How to integrate with Codecov
 
-1. Sing up on [CodeCov](https://codecov.io/) and setup your repository.
+1. Sing up on [Codecov](https://codecov.io/) and setup your repository.
 1. Additionally consider configuring [Codecov GitHub Application](https://github.com/apps/codecov) for better integration.
 1. Add [codecov-action](https://github.com/codecov/codecov-action) to [.github/workflows/build.yml](.github/workflows/build.yml):
 
