@@ -1,8 +1,8 @@
 .DEFAULT_GOAL := help
 
 .PHONY: ci
-all: ## CI build
-all: install generate build lint test mod-tidy build-snapshot diff
+ci: ## CI build
+ci: install generate build lint test mod-tidy build-snapshot diff
 
 .PHONY: dev
 dev: ## fast build
