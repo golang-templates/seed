@@ -20,6 +20,7 @@ It includes:
 - unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
+- security code analysis using [CodeQL Action](https://github.com/github/codeql-action),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
 
 `Star` this repository if you find it valuable and worth maintaining.
