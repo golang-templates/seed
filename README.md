@@ -16,6 +16,7 @@ It includes:
 - continous integration via [GitHub Actions](https://github.com/features/actions),
 - build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
+- code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
 - unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
