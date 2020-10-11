@@ -16,9 +16,9 @@ clean: ## go clean
 .PHONY: install
 install: ## install build tools
 	$(call print-target)
+	go install mvdan.cc/gofumpt/gofumports
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint
 	go install github.com/goreleaser/goreleaser
-	go install golang.org/x/tools/cmd/goimports
 
 .PHONY: generate
 generate: ## go generate
@@ -31,9 +31,9 @@ build: ## go build
 	go build -o /dev/null ./...
 
 .PHONY: fmt
-fmt: ## goimports
+fmt: ## gofumports
 	$(call print-target)
-	goimports -l -w -local github.com/golang-templates/seed . || true
+	gofumports -l -w -local github.com/golang-templates/seed . || true
 
 .PHONY: lint
 lint: ## golangci-lint
