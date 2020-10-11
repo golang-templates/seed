@@ -1,25 +1,25 @@
 .DEFAULT_GOAL := help
 
+.PHONY: dev
+dev: ## dev build
+dev: clean install generate build fmt lint-fast test mod-tidy build-snapshot 
+
 .PHONY: ci
 ci: ## CI build
-ci: install generate build lint test mod-tidy build-snapshot diff
-
-.PHONY: dev
-dev: ## fast build
-dev: build fmt lint-fast test
+ci: dev diff
 
 .PHONY: clean
-clean: ## go clean
+clean: ## remove files created during build
 	$(call print-target)
-	go clean -r -i -cache -testcache -modcache
+	rm -rf dist
+	rm -f coverage.*
 
 .PHONY: install
 install: ## install build tools
 	$(call print-target)
-	cd build
-	go install mvdan.cc/gofumpt/gofumports
-	go install github.com/golangci/golangci-lint/cmd/golangci-lint
-	go install github.com/goreleaser/goreleaser
+	cd build && go install mvdan.cc/gofumpt/gofumports
+	cd build && go install github.com/golangci/golangci-lint/cmd/golangci-lint
+	cd build && go install github.com/goreleaser/goreleaser
 
 .PHONY: generate
 generate: ## go generate
@@ -78,6 +78,11 @@ release: ## goreleaser --rm-dist
 .PHONY: run
 run: ## go run
 	@go run -race ./cmd/seed
+
+.PHONY: go-clean
+go-clean: ## go clean build, test and modules caches
+	$(call print-target)
+	go clean -r -i -cache -testcache -modcache
 
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make ci"
