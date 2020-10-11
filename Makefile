@@ -72,7 +72,7 @@ diff: ## git diff
 .PHONY: release
 release: ## goreleaser --rm-dist
 	$(call print-target)
-	go install github.com/goreleaser/goreleaser
+	cd build && go install github.com/goreleaser/goreleaser
 	goreleaser --rm-dist
 
 .PHONY: run
