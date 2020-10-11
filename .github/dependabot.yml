@@ -11,8 +11,14 @@ updates:
     schedule:
       interval: "weekly"
 
+  # Maintain dependencies for build tools
+  - package-ecosystem: "gomod"
+    directory: "/build"
+    schedule:
+      interval: "weekly"
+
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "weekly"      

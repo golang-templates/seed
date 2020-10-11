@@ -16,6 +16,7 @@ clean: ## go clean
 .PHONY: install
 install: ## install build tools
 	$(call print-target)
+	cd build
 	go install mvdan.cc/gofumpt/gofumports
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint
 	go install github.com/goreleaser/goreleaser
@@ -55,6 +56,7 @@ test: ## go test with race detector and code covarage
 mod-tidy: ## go mod tidy
 	$(call print-target)
 	go mod tidy
+	cd build && go mod tidy
 
 .PHONY: build-snapshot
 build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
