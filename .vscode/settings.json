@@ -1,15 +1,12 @@
 {
     // gopls
     "go.useLanguageServer": true,
+    "gopls": {
+        "gofumpt": true,
+    },
     // golangci-lint  
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
-    ],
-    // goimports
-    "go.formatTool": "goimports",
-    "go.formatFlags": [
-        "-local",
-        "github.com/golang-templates/seed"
     ]
 }
