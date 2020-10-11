@@ -18,7 +18,7 @@ It includes:
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- unit testing with [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
+- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
