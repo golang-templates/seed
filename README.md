@@ -78,7 +78,8 @@ You can also use the `docker` make target to run the build using a docker contai
 
 ### How can I use Make on Windows
 
-Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or try [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+Alternatively install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
 
 ### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
 
