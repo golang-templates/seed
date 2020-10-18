@@ -2,7 +2,7 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean install generate build fmt lint-fast test mod-tidy build-snapshot 
+dev: clean install generate build fmt lint test mod-tidy build-snapshot 
 
 .PHONY: ci
 ci: ## CI build
@@ -40,11 +40,6 @@ fmt: ## gofumports
 lint: ## golangci-lint
 	$(call print-target)
 	golangci-lint run
-
-.PHONY: lint-fast
-lint-fast: ## golangci-lint --fast
-	$(call print-target)
-	golangci-lint run --fast
 
 .PHONY: test
 test: ## go test with race detector and code covarage
