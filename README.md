@@ -5,6 +5,7 @@
 [![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
 [![Build Status](https://img.shields.io/github/workflow/status/golang-templates/seed/build)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amaster)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
+[![Codecov](https://codecov.io/gh/golang-templates/seed/branch/master/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
 
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
@@ -18,7 +19,7 @@ It includes:
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector) and [code covarage HTML report](https://blog.golang.org/cover),
+- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector), code covarage [HTML report](https://blog.golang.org/cover) and [Codecov report](https://codecov.io/),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
@@ -29,9 +30,10 @@ It includes:
 
 ## Usage
 
+1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Rename folder `cmd/seed` to `cmd/repo_name` and update [.goreleaser.yml](.goreleaser.yml).
+1. Rename folder `cmd/seed` to `cmd/app_name` and update [.goreleaser.yml](.goreleaser.yml) accordingly.
 1. Update [LICENSE](LICENSE) and [README.md](README.md).
 
 ## Build
@@ -77,15 +79,11 @@ However, changing to any other CI server should be very simple, because this rep
 
 You can also use the `docker` make target to run the build using a docker container.
 
-### How can I use Make on Windows
+### How can I build on Windows
 
-Use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-Alternatively install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and [Make Windows port](https://gist.github.com/evanwill/0207876c3243bbb6863e65ec5dc3f058).
+Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and add an alias in `~/.bashrc`: `alias make='mingw32-make.exe'`
 
-### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
-
-Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
-
+Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers).
 
 ### How can I create an application installation script
 
@@ -102,6 +100,10 @@ godownloader --repo=your_org/repo_name > ./install.sh
 ```bash
 curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/master/install.sh | sh -s -- -b /usr/local/bin
 ```
+
+### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
+
+Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
 
 ### How can I create a library instead of an application
 
@@ -120,32 +122,6 @@ Alternatively, you can completly remove the usage of GoReleaser if you prefer ha
 ### Why the code coverage results are not accurate
 
 By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
-
-### How to integrate with Codecov
-
-1. Sing up on [Codecov](https://codecov.io/) and setup your repository.
-1. Additionally consider configuring [Codecov GitHub Application](https://github.com/apps/codecov) for better integration.
-1. Add [codecov-action](https://github.com/codecov/codecov-action) to [.github/workflows/build.yml](.github/workflows/build.yml):
-
-```yaml
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.0.10
-        with:
-          file: ./coverage.out
-```
-
-4. Add a badge in [README.md](README.md):
-
-```md
-[![codecov](https://codecov.io/gh/your_org/repo_name/branch/master/graph/badge.svg)](https://codecov.io/gh/your_org/repo_name)
-```
-
-Codecov integration example:
-- [repository](https://github.com/pellared/codecov-integration-example),
-- [coverage report](https://codecov.io/gh/pellared/codecov-integration-example/src/master/cmd/seed/main.go),
-- [pull request comment](https://github.com/pellared/codecov-integration-example/pull/3#issuecomment-653814033).
-
-Read [Codecov docs](https://docs.codecov.io/docs/quick-start) for further information and troubleshooting.
 
 ### How to automate generating git tags for next release version
 
