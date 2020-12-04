@@ -34,3 +34,7 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.0.15
+        with:
+          file: ./coverage.out
