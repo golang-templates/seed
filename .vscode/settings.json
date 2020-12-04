@@ -1,9 +1,22 @@
 {
-    // gopls
+    // gopls with gofumpt and import ordering
     "go.useLanguageServer": true,
     "gopls": {
         "gofumpt": true,
     },
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+
     // golangci-lint  
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
