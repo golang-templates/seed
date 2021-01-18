@@ -2,7 +2,7 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean install generate build fmt lint test mod-tidy build-snapshot 
+dev: clean generate build fmt lint test mod-tidy build-snapshot 
 
 .PHONY: ci
 ci: ## CI build
@@ -13,13 +13,6 @@ clean: ## remove files created during build
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
-
-.PHONY: install
-install: ## install build tools
-	$(call print-target)
-	cd tools && go install mvdan.cc/gofumpt/gofumports
-	cd tools && go install github.com/golangci/golangci-lint/cmd/golangci-lint
-	cd tools && go install github.com/goreleaser/goreleaser
 
 .PHONY: generate
 generate: ## go generate
@@ -32,13 +25,14 @@ build: ## go build
 	go build -o /dev/null ./...
 
 .PHONY: fmt
-fmt: ## gofumports
+fmt: ## go fmt
 	$(call print-target)
-	gofumports -l -w -local github.com/golang-templates/seed . || true
+	go fmt ./...
 
 .PHONY: lint
 lint: ## golangci-lint
 	$(call print-target)
+	cd tools && go install github.com/golangci/golangci-lint/cmd/golangci-lint
 	golangci-lint run
 
 .PHONY: test
@@ -56,6 +50,7 @@ mod-tidy: ## go mod tidy
 .PHONY: build-snapshot
 build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
 	$(call print-target)
+	cd tools && go install github.com/goreleaser/goreleaser
 	goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: diff
