@@ -81,9 +81,9 @@ You can also use the `docker` make target to run the build using a docker contai
 
 ### How can I build on Windows
 
-Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and add an alias in `~/.bashrc`: `alias make='mingw32-make.exe'`
+Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and copy `C:\TDM-GCC-64\bin\mingw32-make.exe` to `C:\TDM-GCC-64\bin\make.exe`.
 
-Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers).
+Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers). However, take into consideration that then you are not going to use "bare-metal" Windows.
 
 ### How can I create an application installation script
 
