@@ -9,6 +9,5 @@ import (
 func Test_greet(t *testing.T) {
 	got := greet()
 
-	want := "Hi!"
-	assert.Equal(t, want, got, "should properly greet")
+	assert.Equal(t, "Hi!", got, "should properly greet")
 }
