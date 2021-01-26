@@ -10,7 +10,14 @@ on:
 
 jobs:
   ci-build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [1.15]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v2
         with:
@@ -21,7 +28,7 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - uses: actions/setup-go@v2
         with:
-          go-version: 1.15
+          go-version: ${{ matrix.go-version }}
       - name: Build
         run: make ci
       - name: Upload coverage
@@ -34,3 +41,8 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage.out
+          flags: ${{ runner.os }}

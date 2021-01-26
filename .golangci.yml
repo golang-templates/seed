@@ -71,6 +71,10 @@ linters:
     - unparam
     - whitespace
     - wsl
+    - exhaustivestruct
+    - errorlint
+    - tparallel
+    - wrapcheck
     # don't enable:
     # - go-header
     # - testpackage

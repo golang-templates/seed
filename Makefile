@@ -1,24 +1,23 @@
 .DEFAULT_GOAL := help
 
+.PHONY: dev
+dev: ## dev build
+dev: clean install generate build fmt lint test mod-tidy build-snapshot 
+
 .PHONY: ci
 ci: ## CI build
-ci: install generate build lint test mod-tidy build-snapshot diff
-
-.PHONY: dev
-dev: ## fast build
-dev: build fmt lint-fast test
+ci: dev diff
 
 .PHONY: clean
-clean: ## go clean
+clean: ## remove files created during build
 	$(call print-target)
-	go clean -r -i -cache -testcache -modcache
+	rm -rf dist
+	rm -f coverage.*
 
 .PHONY: install
-install: ## install build tools
+install: ## go install tools
 	$(call print-target)
-	go install github.com/golangci/golangci-lint/cmd/golangci-lint
-	go install github.com/goreleaser/goreleaser
-	go install golang.org/x/tools/cmd/goimports
+	cd tools && go install -v $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
 
 .PHONY: generate
 generate: ## go generate
@@ -31,19 +30,14 @@ build: ## go build
 	go build -o /dev/null ./...
 
 .PHONY: fmt
-fmt: ## goimports
+fmt: ## go fmt
 	$(call print-target)
-	goimports -l -w -local github.com/golang-templates/seed . || true
+	go fmt ./...
 
 .PHONY: lint
 lint: ## golangci-lint
 	$(call print-target)
 	golangci-lint run
-
-.PHONY: lint-fast
-lint-fast: ## golangci-lint --fast
-	$(call print-target)
-	golangci-lint run --fast
 
 .PHONY: test
 test: ## go test with race detector and code covarage
@@ -55,6 +49,7 @@ test: ## go test with race detector and code covarage
 mod-tidy: ## go mod tidy
 	$(call print-target)
 	go mod tidy
+	cd tools && go mod tidy
 
 .PHONY: build-snapshot
 build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
@@ -69,13 +64,18 @@ diff: ## git diff
 
 .PHONY: release
 release: ## goreleaser --rm-dist
+release: install
 	$(call print-target)
-	go install github.com/goreleaser/goreleaser
 	goreleaser --rm-dist
 
 .PHONY: run
 run: ## go run
 	@go run -race ./cmd/seed
+
+.PHONY: go-clean
+go-clean: ## go clean build, test and modules caches
+	$(call print-target)
+	go clean -r -i -cache -testcache -modcache
 
 .PHONY: docker
 docker: ## run in golang container, example: make docker run="make ci"
