@@ -22,7 +22,7 @@ It includes:
 - unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector), code covarage [HTML report](https://blog.golang.org/cover) and [Codecov report](https://codecov.io/),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
-- security code analysis using [CodeQL Action](https://github.com/github/codeql-action),
+- security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
 
 `Star` this repository if you find it valuable and worth maintaining.
