@@ -59,7 +59,7 @@ build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
-	#git diff --exit-code
+	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
 .PHONY: release
