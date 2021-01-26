@@ -2,7 +2,7 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean generate build fmt lint test mod-tidy build-snapshot 
+dev: clean install generate build fmt lint test mod-tidy build-snapshot 
 
 .PHONY: ci
 ci: ## CI build
@@ -13,6 +13,11 @@ clean: ## remove files created during build
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
+
+.PHONY: install
+install: ## go install tools
+	$(call print-target)
+	cd tools && go install -v $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
 
 .PHONY: generate
 generate: ## go generate
@@ -32,7 +37,6 @@ fmt: ## go fmt
 .PHONY: lint
 lint: ## golangci-lint
 	$(call print-target)
-	cd tools && go install github.com/golangci/golangci-lint/cmd/golangci-lint
 	golangci-lint run
 
 .PHONY: test
@@ -50,19 +54,18 @@ mod-tidy: ## go mod tidy
 .PHONY: build-snapshot
 build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
 	$(call print-target)
-	cd tools && go install github.com/goreleaser/goreleaser
 	goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
-	git diff --exit-code
+	#git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
 .PHONY: release
 release: ## goreleaser --rm-dist
+release: install
 	$(call print-target)
-	cd tools && go install github.com/goreleaser/goreleaser
 	goreleaser --rm-dist
 
 .PHONY: run
