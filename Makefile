@@ -17,7 +17,7 @@ clean: ## remove files created during build
 .PHONY: install
 install: ## go install tools
 	$(call print-target)
-	cd tools && go install -v $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
+	cd tools && go install $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
 
 .PHONY: generate
 generate: ## go generate
@@ -82,7 +82,7 @@ docker: ## run in golang container, example: make docker run="make ci"
 	docker run --rm \
 		-v $(CURDIR):/repo $(args) \
 		-w /repo \
-		golang:1.15 $(run)
+		golang:1.16 $(run)
 
 .PHONY: help
 help:
