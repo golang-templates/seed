@@ -4,5 +4,5 @@ go 1.15
 
 require (
 	github.com/golangci/golangci-lint v1.37.0
-	github.com/goreleaser/goreleaser v0.155.2
+	github.com/goreleaser/goreleaser v0.156.2
 )
