@@ -3,9 +3,9 @@
 [![GitHub Release](https://img.shields.io/github/v/release/golang-templates/seed)](https://github.com/golang-templates/seed/releases)
 [![Go Reference](https://pkg.go.dev/badge/github.com/golang-templates/seed.svg)](https://pkg.go.dev/github.com/golang-templates/seed)
 [![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
-[![Build Status](https://img.shields.io/github/workflow/status/golang-templates/seed/build)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amaster)
+[![Build Status](https://img.shields.io/github/workflow/status/golang-templates/seed/build)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amain)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
-[![Codecov](https://codecov.io/gh/golang-templates/seed/branch/master/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
+[![Codecov](https://codecov.io/gh/golang-templates/seed/branch/main/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
 
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
@@ -99,7 +99,7 @@ godownloader --repo=your_org/repo_name > ./install.sh
 1. Add installation instructions to your `README.md` e.g.:
 
 ```bash
-curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/master/install.sh | sh -s -- -b /usr/local/bin
+curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
 ```
 
 ### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
