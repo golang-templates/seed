@@ -3,8 +3,8 @@ name: build
 on:
   push:
     branches: 
-      - master
       - main 
+      - master
   pull_request:
     branches:
       - '*'
