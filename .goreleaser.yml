@@ -2,8 +2,7 @@ before:
   hooks:
     - go mod download
 builds:
-- main: ./cmd/seed/main.go
-  env:
+- env:
     - CGO_ENABLED=0
   goos:
     - darwin

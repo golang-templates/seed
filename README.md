@@ -35,13 +35,18 @@ It includes:
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Rename folder `cmd/seed` to `cmd/app_name` and update [.goreleaser.yml](.goreleaser.yml) accordingly.
 1. Update [LICENSE](LICENSE) and [README.md](README.md).
 
 ## Build
 
-- Terminal: `make help` to get help for make targets.
-- Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
+### Terminal
+
+- `make` - execute the build pipeline.
+- `make help` - print help for provided [Make targets](Makefile).
+
+### Visual Studio Code
+
+ `Terminal` → `Run Build Task... (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
 
 ## Release
 
@@ -54,6 +59,7 @@ _CAUTION_: Make sure to understand the consequences before you bump the major ve
 Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
+
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration,
 - [.github/workflows](.github/workflows) - GitHub Actions workflows,
 - [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
@@ -68,7 +74,7 @@ Notable files:
 
 ### Why Visual Studio Code editor configuration
 
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). 
+Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
 
 You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) directories if it really does not help you.
 
@@ -77,7 +83,7 @@ You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) 
 GitHub Actions is out-of-the-box if you are already using GitHub.
 [Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
 
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. 
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
 
 You can also use the `docker` make target to run the build using a docker container.
 
@@ -90,20 +96,22 @@ Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com
 ### How can I create an application installation script
 
 1. Install [GoDownloader](https://github.com/goreleaser/godownloader).
-1. Execute: 
 
-```bash
-godownloader --repo=your_org/repo_name > ./install.sh
-```
+1. Execute:
 
-3. Push `install.sh` to your repository.
+    ```bash
+    godownloader --repo=your_org/repo_name > ./install.sh
+    ```
+
+1. Push `install.sh` to your repository.
+
 1. Add installation instructions to your `README.md` e.g.:
 
-```bash
-curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
-```
+    ```bash
+    curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
+    ```
 
-### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
+### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc
 
 Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
 
