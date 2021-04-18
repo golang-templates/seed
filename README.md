@@ -35,13 +35,46 @@ It includes:
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Rename folder `cmd/seed` to `cmd/app_name` and update [.goreleaser.yml](.goreleaser.yml) accordingly.
+1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update [LICENSE](LICENSE) and [README.md](README.md).
+
+## Setup
+
+Below you can find sample instructions on how to set up the development environment.
+Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el). However take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
+
+### Local Machine
+
+Follow these steps if you are OK installing and using Go on your machine.
+
+1. Install [Go](https://golang.org/doc/install).
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+1. Install [Go extension](https://code.visualstudio.com/docs/languages/go).
+1. Clone and open this repository.
+1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
+
+### Development Container
+
+Follow these steps if you do not want to install Go on your machine and you prefer to use a Development Container instead.
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+1. Follow [Developing inside a Container - Getting Started](https://code.visualstudio.com/docs/remote/containers#_getting-started).
+1. Clone and open this repository.
+1. `F1` -> `Remote-Containers: Reopen in Container`.
+1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
+
+The Development Container configuration mixes [Docker in Docker](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker) and [Go](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/go) definitions. Thanks to it you can use `go`, `docker`, `docker-compose` inside the container.
 
 ## Build
 
-- Terminal: `make help` to get help for make targets.
-- Visual Studio Code: `Terminal` → `Run Build Task... (CTRL+ALT+B)` to execute a fast build.
+### Terminal
+
+- `make` - execute the build pipeline.
+- `make help` - print help for provided [Make targets](Makefile).
+
+### Visual Studio Code
+
+ `Terminal` → `Run Build Task... (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
 
 ## Release
 
@@ -54,12 +87,14 @@ _CAUTION_: Make sure to understand the consequences before you bump the major ve
 Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
+
 - [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration,
 - [.github/workflows](.github/workflows) - GitHub Actions workflows,
 - [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
 - [.vscode](.vscode) - Visual Studio Code configuration files,
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration,
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
+- [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image,
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),
 - [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
 - [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
@@ -68,7 +103,7 @@ Notable files:
 
 ### Why Visual Studio Code editor configuration
 
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go). 
+Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
 
 You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) directories if it really does not help you.
 
@@ -77,7 +112,7 @@ You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) 
 GitHub Actions is out-of-the-box if you are already using GitHub.
 [Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
 
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile. 
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
 
 You can also use the `docker` make target to run the build using a docker container.
 
@@ -90,20 +125,22 @@ Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com
 ### How can I create an application installation script
 
 1. Install [GoDownloader](https://github.com/goreleaser/godownloader).
-1. Execute: 
 
-```bash
-godownloader --repo=your_org/repo_name > ./install.sh
-```
+1. Execute:
 
-3. Push `install.sh` to your repository.
+    ```bash
+    godownloader --repo=your_org/repo_name > ./install.sh
+    ```
+
+1. Push `install.sh` to your repository.
+
 1. Add installation instructions to your `README.md` e.g.:
 
-```bash
-curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
-```
+    ```bash
+    curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
+    ```
 
-### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc.
+### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
 
 Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
 
@@ -119,7 +156,7 @@ release:
   prerelease: auto
 ```
 
-Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
+Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look how it is done in [taskflow](https://github.com/pellared/taskflow).
 
 ### Why the code coverage results are not accurate
 

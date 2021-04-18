@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "dev",
+            "label": "make",
             "type": "shell",
-            "command": "make dev",
+            "command": "make",
             "problemMatcher": [
                 "$go"
             ],

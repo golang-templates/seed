@@ -2,14 +2,14 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean install generate build fmt lint test mod-tidy build-snapshot 
+dev: clean install generate vet fmt lint test mod-tidy
 
 .PHONY: ci
 ci: ## CI build
 ci: dev diff
 
 .PHONY: clean
-clean: ## remove files created during build
+clean: ## remove files created during build pipeline
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
@@ -24,10 +24,10 @@ generate: ## go generate
 	$(call print-target)
 	go generate ./...
 
-.PHONY: build
-build: ## go build
+.PHONY: vet
+vet: ## go vet
 	$(call print-target)
-	go build -o /dev/null ./...
+	go vet ./...
 
 .PHONY: fmt
 fmt: ## go fmt
@@ -51,16 +51,17 @@ mod-tidy: ## go mod tidy
 	go mod tidy
 	cd tools && go mod tidy
 
-.PHONY: build-snapshot
-build-snapshot: ## goreleaser --snapshot --skip-publish --rm-dist
-	$(call print-target)
-	goreleaser --snapshot --skip-publish --rm-dist
-
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
 	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
+
+.PHONY: build
+build: ## goreleaser --snapshot --skip-publish --rm-dist
+build: install
+	$(call print-target)
+	goreleaser --snapshot --skip-publish --rm-dist
 
 .PHONY: release
 release: ## goreleaser --rm-dist
@@ -70,19 +71,12 @@ release: install
 
 .PHONY: run
 run: ## go run
-	@go run -race ./cmd/seed
+	@go run -race .
 
 .PHONY: go-clean
 go-clean: ## go clean build, test and modules caches
 	$(call print-target)
 	go clean -r -i -cache -testcache -modcache
-
-.PHONY: docker
-docker: ## run in golang container, example: make docker run="make ci"
-	docker run --rm \
-		-v $(CURDIR):/repo $(args) \
-		-w /repo \
-		golang:1.16 $(run)
 
 .PHONY: help
 help:

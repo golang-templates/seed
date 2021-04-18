@@ -30,40 +30,36 @@ linters:
     - varcheck
     - bodyclose
     - depguard
-    - dogsled
     - dupl
     - exportloopref
+    - forcetypeassert
     - funlen
-    - gochecknoglobals
-    - gochecknoinits
+    - gci
     - gocognit
     - goconst
     - gocritic
     - gocyclo
     - godot
-    - gofmt
     - gofumpt
-    - goimports
     - golint
     - gomnd
     - goprintffuncname
     - gosec
-    - lll
+    - ifshort
     - misspell
-    - nakedret
     - noctx
     - nolintlint
     - rowserrcheck
     - sqlclosecheck
     - stylecheck
+    - thelper
+    - tparallel
     - unconvert
     - unparam
     - whitespace
-    - errorlint
-    - tparallel
-    - wrapcheck
-    # - godox
-
+    # - errorlint
+    # - goerr113
+    # - wrapcheck
 issues:
   # enable issues excluded by default 
   exclude-use-default: false
