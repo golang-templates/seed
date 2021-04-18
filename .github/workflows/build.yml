@@ -1,12 +1,6 @@
 name: build
 
-on:
-  push:
-    branches: 
-      - main 
-  pull_request:
-    branches:
-      - '*'
+on: [push, pull_request]
 
 jobs:
   ci:
@@ -45,3 +39,17 @@ jobs:
         with:
           file: ./coverage.out
           flags: ${{ runner.os }}
+
+  release-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
+      - name: Release test
+        run: make build
