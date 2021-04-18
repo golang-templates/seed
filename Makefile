@@ -77,11 +77,6 @@ go-clean: ## go clean build, test and modules caches
 	$(call print-target)
 	go clean -r -i -cache -testcache -modcache
 
-.PHONY: docker
-docker: ## run in golang container, example: make docker run="make dev"
-	docker run --rm -v $(CURDIR):/repo $(args) -w /repo golang:1.16 \
-	$(run)
-
 .PHONY: help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

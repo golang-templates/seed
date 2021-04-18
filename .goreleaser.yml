@@ -17,3 +17,18 @@ archives:
 release:
   github:
   prerelease: auto
+dockers:
+  - binaries:
+    - "{{ .ProjectName }}"
+    image_templates:
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:latest"
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}"
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}"
+    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
+    build_flag_templates:
+    - "--pull"
+    - "--label=org.opencontainers.image.created={{.Date}}"
+    - "--label=org.opencontainers.image.name={{.ProjectName}}"
+    - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+    - "--label=org.opencontainers.image.version={{.Version}}"
+    - "--label=org.opencontainers.image.source={{.GitURL}}"

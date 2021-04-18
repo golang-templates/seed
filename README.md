@@ -35,7 +35,35 @@ It includes:
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
+1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update [LICENSE](LICENSE) and [README.md](README.md).
+
+## Setup
+
+Below you can find sample instructions on how to set up the development environment.
+Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el). However take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
+
+### Local Machine
+
+Follow these steps if you are OK installing and using Go on your machine.
+
+1. Install [Go](https://golang.org/doc/install).
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+1. Install [Go extension](https://code.visualstudio.com/docs/languages/go).
+1. Clone and open this repository.
+1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
+
+### Development Container
+
+Follow these steps if you do not want to install Go on your machine and you prefer to use a Development Container instead.
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/).
+1. Follow [Developing inside a Container - Getting Started](https://code.visualstudio.com/docs/remote/containers#_getting-started).
+1. Clone and open this repository.
+1. `F1` -> `Remote-Containers: Reopen in Container`.
+1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
+
+The Development Container configuration mixes [Docker in Docker](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker) and [Go](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/go) definitions. Thanks to it you can use `go`, `docker`, `docker-compose` inside the container.
 
 ## Build
 
@@ -66,6 +94,7 @@ Notable files:
 - [.vscode](.vscode) - Visual Studio Code configuration files,
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration,
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
+- [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image,
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),
 - [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
 - [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
@@ -111,7 +140,7 @@ Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com
     curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
     ```
 
-### How can I create a Docker image, deb/rpm/snap package, Homebrew Tap, Scoop App Manifest etc
+### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
 
 Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
 
@@ -127,7 +156,7 @@ release:
   prerelease: auto
 ```
 
-Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes.
+Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look how it is done in [taskflow](https://github.com/pellared/taskflow).
 
 ### Why the code coverage results are not accurate
 
