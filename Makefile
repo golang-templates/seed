@@ -59,6 +59,7 @@ diff: ## git diff
 
 .PHONY: build
 build: ## goreleaser --snapshot --skip-publish --rm-dist
+build: install
 	$(call print-target)
 	goreleaser --snapshot --skip-publish --rm-dist
 
