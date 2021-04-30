@@ -37,7 +37,7 @@ It includes:
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
-1. Update following files:
+1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
    - [LICENSE](LICENSE)
    - [README.md](README.md)
