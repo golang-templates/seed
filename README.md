@@ -78,7 +78,7 @@ The Development Container configuration mixes [Docker in Docker](https://github.
 
 ### Visual Studio Code
 
- `Terminal` → `Run Build Task... (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
+ `F1` → `Run Build Task... (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
 
 ## Release
 
