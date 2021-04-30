@@ -1,5 +1,6 @@
 # Go Repository Template
 
+[![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
 [![GitHub Release](https://img.shields.io/github/v/release/golang-templates/seed)](https://github.com/golang-templates/seed/releases)
 [![Go Reference](https://pkg.go.dev/badge/github.com/golang-templates/seed.svg)](https://pkg.go.dev/github.com/golang-templates/seed)
 [![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
@@ -36,7 +37,10 @@ It includes:
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
-1. Update [LICENSE](LICENSE) and [README.md](README.md).
+1. Update the following files:
+   - [CHANGELOG.md](CHANGELOG.md)
+   - [LICENSE](LICENSE)
+   - [README.md](README.md)
 
 ## Setup
 
@@ -70,11 +74,11 @@ The Development Container configuration mixes [Docker in Docker](https://github.
 ### Terminal
 
 - `make` - execute the build pipeline.
-- `make help` - print help for provided [Make targets](Makefile).
+- `make help` - print help for the [Make targets](Makefile).
 
 ### Visual Studio Code
 
- `Terminal` → `Run Build Task... (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
+`F1` → `Tasks: Run Build Task (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
 
 ## Release
 
@@ -112,13 +116,11 @@ You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) 
 GitHub Actions is out-of-the-box if you are already using GitHub.
 [Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
 
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
-
-You can also use the `docker` make target to run the build using a docker container.
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in [Makefile](Makefile).
 
 ### How can I build on Windows
 
-Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and copy `C:\TDM-GCC-64\bin\mingw32-make.exe` to `C:\TDM-GCC-64\bin\make.exe`.
+Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and copy `C:\TDM-GCC-64\bin\mingw32-make.exe` to `C:\TDM-GCC-64\bin\make.exe`. Alternatively, you may install [mingw-w64](http://mingw-w64.org/doku.php) and copy `mingw32-make.exe` accordingly.
 
 Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers). However, take into consideration that then you are not going to use "bare-metal" Windows.
 
