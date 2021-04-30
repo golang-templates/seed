@@ -29,6 +29,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Move `main` package to the root directory. ([#127](https://github.com/golang-templates/seed/pull/127))
   - It is suggested to use the `cmd` structure if the repository builds more than one application.
-- Update [.golangci.yml](https://github.com/golang-templates/seed/blob/main/.golangci.yml). ([#127](https://github.com/golang-templates/seed/pull/127))
+- Update [.golangci.yml](https://github.com/golang-templates/seed/blob/v0.14.0/.golangci.yml). ([#127](https://github.com/golang-templates/seed/pull/127))
 - Bump [GoReleaser](github.com/goreleaser/goreleaser) to [0.162.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.162.0). ([#126](https://github.com/golang-templates/seed/pull/126))
 - Bump [golangci-lint](github.com/golangci/golangci-lint) to [1.39.0](https://github.com/golangci/golangci-lint/releases/tag/v1.39.0). ([#125](https://github.com/golang-templates/seed/pull/125))
