@@ -1,6 +1,11 @@
 name: build
 
-on: [push, pull_request]
+on:
+  push: 
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   ci:
@@ -8,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         go-version: [1.16]
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ ubuntu-20.04, macos-11.0, windows-2019 ]
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -41,7 +46,7 @@ jobs:
           flags: ${{ runner.os }}
 
   release-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
         with:
