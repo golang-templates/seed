@@ -1,5 +1,6 @@
 # Go Repository Template
 
+[![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
 [![GitHub Release](https://img.shields.io/github/v/release/golang-templates/seed)](https://github.com/golang-templates/seed/releases)
 [![Go Reference](https://pkg.go.dev/badge/github.com/golang-templates/seed.svg)](https://pkg.go.dev/github.com/golang-templates/seed)
 [![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
@@ -36,7 +37,10 @@ It includes:
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
-1. Update [LICENSE](LICENSE) and [README.md](README.md).
+1. Update following files:
+   - [CHANGELOG.md](CHANGELOG.md)
+   - [LICENSE](LICENSE)
+   - [README.md](README.md)
 
 ## Setup
 
