@@ -74,11 +74,11 @@ The Development Container configuration mixes [Docker in Docker](https://github.
 ### Terminal
 
 - `make` - execute the build pipeline.
-- `make help` - print help for provided [Make targets](Makefile).
+- `make help` - print help for the [Make targets](Makefile).
 
 ### Visual Studio Code
 
- `F1` → `Run Build Task... (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
+`F1` → `Tasks: Run Build Task (Ctrl+Shift+B or ⇧⌘B)` to execute the build pipeline.
 
 ## Release
 
