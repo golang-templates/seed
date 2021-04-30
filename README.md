@@ -116,13 +116,11 @@ You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) 
 GitHub Actions is out-of-the-box if you are already using GitHub.
 [Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
 
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in Makefile.
-
-You can also use the `docker` make target to run the build using a docker container.
+However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in [Makefile](Makefile).
 
 ### How can I build on Windows
 
-Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and copy `C:\TDM-GCC-64\bin\mingw32-make.exe` to `C:\TDM-GCC-64\bin\make.exe`.
+Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) (or [mingw-w64](http://mingw-w64.org/doku.php)) and copy `C:\TDM-GCC-64\bin\mingw32-make.exe` to `C:\TDM-GCC-64\bin\make.exe`.
 
 Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers). However, take into consideration that then you are not going to use "bare-metal" Windows.
 
