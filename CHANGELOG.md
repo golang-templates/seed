@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Automatic trigger for the `main` branch.
   - Automatic trigger for pull requests targeting the `main` branch.
   - Manual trigger via [`workflow_dispatch`](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#workflow_dispatch) ([blog post](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/)).
-- Lock the runners' versions in `build` and `release` GitHub workflows. ([#130](https://github.com/golang-templates/seed/pull/130))
+- Lock the runners' version in `build` and `release` GitHub workflows. ([#130](https://github.com/golang-templates/seed/pull/130))
 
 ## [0.14.0](https://github.com/golang-templates/seed/releases/tag/v0.14.0)
 
