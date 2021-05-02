@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Automatic trigger for pull requests targeting the `main` branch.
   - Manual trigger via [`workflow_dispatch`](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#workflow_dispatch) ([blog post](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/)).
 - Lock the runners' version the in `build` and `release` GitHub workflows. ([#130](https://github.com/golang-templates/seed/pull/130))
+- Configure `golint` linter with `min-confidence: 0.8` to avoid [false positive "should have a package comment"](https://github.com/golangci/golangci-lint/issues/1556). ([#132](https://github.com/golang-templates/seed/pull/132))
+- Configure `gocyclo` linter with `min-complexity: 15` with is a recommeded value by [Go Report Card](https://goreportcard.com/). ([#132](https://github.com/golang-templates/seed/pull/132))
 
 ## [0.14.0](https://github.com/golang-templates/seed/releases/tag/v0.14.0)
 
