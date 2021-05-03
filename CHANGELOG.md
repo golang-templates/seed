@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added 
 
 - Add [CHANGELOG.md](CHANGELOG.md) based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). ([#131](https://github.com/golang-templates/seed/pull/131))
+- Add [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) based on [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/). ([#133](https://github.com/golang-templates/seed/pull/133))
 
 ### Changed
 
