@@ -39,6 +39,7 @@ It includes:
 1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
+   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
    - [LICENSE](LICENSE)
    - [README.md](README.md)
 
