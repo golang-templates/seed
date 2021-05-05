@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Lock the runners' version the in `build` and `release` GitHub workflows. ([#130](https://github.com/golang-templates/seed/pull/130))
 - Configure `golint` linter with `min-confidence: 0.8` to avoid [false positive "should have a package comment"](https://github.com/golangci/golangci-lint/issues/1556). ([#132](https://github.com/golang-templates/seed/pull/132))
 - Configure `gocyclo` linter with `min-complexity: 15` with is a recommeded value by [Go Report Card](https://goreportcard.com/). ([#132](https://github.com/golang-templates/seed/pull/132))
-- Update [GoReleaser](github.com/goreleaser/goreleaser) to [0.164.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.164.0). ([#129](https://github.com/golang-templates/seed/pull/129))
+- Update [GoReleaser](https://github.com/goreleaser/goreleaser) to [0.164.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.164.0). ([#129](https://github.com/golang-templates/seed/pull/129))
 
 ## [0.14.0](https://github.com/golang-templates/seed/releases/tag/v0.14.0)
 
@@ -36,5 +36,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move the `main` package to the root directory. ([#127](https://github.com/golang-templates/seed/pull/127))
   - It is suggested to use the `cmd` structure if the repository builds more than one application.
 - Update [.golangci.yml](https://github.com/golang-templates/seed/blob/v0.14.0/.golangci.yml). ([#127](https://github.com/golang-templates/seed/pull/127))
-- Update [GoReleaser](github.com/goreleaser/goreleaser) to [0.162.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.162.0). ([#126](https://github.com/golang-templates/seed/pull/126))
-- Update [golangci-lint](github.com/golangci/golangci-lint) to [1.39.0](https://github.com/golangci/golangci-lint/releases/tag/v1.39.0). ([#125](https://github.com/golang-templates/seed/pull/125))
+- Update [GoReleaser](https://github.com/goreleaser/goreleaser) to [0.162.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.162.0). ([#126](https://github.com/golang-templates/seed/pull/126))
+- Update [golangci-lint](https://github.com/golangci/golangci-lint) to [1.39.0](https://github.com/golangci/golangci-lint/releases/tag/v1.39.0). ([#125](https://github.com/golang-templates/seed/pull/125))
