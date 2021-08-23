@@ -50,8 +50,9 @@ cloud.google.com/go/storage v1.8.0/go.mod h1:Wv1Oy7z6Yz3DshWRJFhqM/UCfaWIRTdp0RX
 cloud.google.com/go/storage v1.10.0/go.mod h1:FLPqc6j+Ki4BU591ie1oL6qBQGu2Bl/tZ9ullr3+Kg0=
 cloud.google.com/go/storage v1.15.0 h1:Ljj+ZXVEhCr/1+4ZhvtteN1ND7UUsNTlduGclLh8GO0=
 cloud.google.com/go/storage v1.15.0/go.mod h1:mjjQMoxxyGH7Jr8K5qrx6N2O0AHsczI61sMNn03GIZI=
-code.gitea.io/sdk/gitea v0.14.1 h1:NaRluse+dAxVM5RmHC7Xktfas5a8WWmcnUBlJLhJycA=
-code.gitea.io/sdk/gitea v0.14.1/go.mod h1:89WiyOX1KEcvjP66sRHdu0RafojGo60bT9UqW17VbWs=
+code.gitea.io/gitea-vet v0.2.1/go.mod h1:zcNbT/aJEmivCAhfmkHOlT645KNOf9W2KnkLgFjGGfE=
+code.gitea.io/sdk/gitea v0.15.0 h1:tsNhxDM/2N1Ohv1Xq5UWrht/esg0WmtRj4wsHVHriTg=
+code.gitea.io/sdk/gitea v0.15.0/go.mod h1:klY2LVI3s3NChzIk/MzMn7G1FHrfU7qd63iSMVoHRBA=
 contrib.go.opencensus.io/exporter/aws v0.0.0-20200617204711-c478e41e60e9/go.mod h1:uu1P0UCM/6RbsMrgPa98ll8ZcHM858i/AD06a9aLRCA=
 contrib.go.opencensus.io/exporter/stackdriver v0.13.4/go.mod h1:aXENhDJ1Y4lIg4EUaVTwzvYETVNZk10Pu26tevFKLUc=
 contrib.go.opencensus.io/exporter/stackdriver v0.13.5/go.mod h1:aXENhDJ1Y4lIg4EUaVTwzvYETVNZk10Pu26tevFKLUc=
@@ -485,8 +486,8 @@ github.com/goreleaser/chglog v0.1.2 h1:tdzAb/ILeMnphzI9zQ7Nkq+T8R9qyXli8GydD8plF
 github.com/goreleaser/chglog v0.1.2/go.mod h1:tTZsFuSZK4epDXfjMkxzcGbrIOXprf0JFp47BjIr3B8=
 github.com/goreleaser/fileglob v1.2.0 h1:OErqbdzeg/eibfDGPHDQDN8jL5u1jNyxA5IQzNPLLoU=
 github.com/goreleaser/fileglob v1.2.0/go.mod h1:rFyb2pXaK3YdnYnSjn6lifw0h2Q6s8OfOsx6I6bXkKE=
-github.com/goreleaser/goreleaser v0.174.2 h1:EltDZkVGq0mC2Aqgc7uGT7A0aaXdt4KPV6OxTmUG4pk=
-github.com/goreleaser/goreleaser v0.174.2/go.mod h1:4iqH/ZtpTVyoyatQd8/SIkYu3ROmk2vJ7tRe1Q6ICW0=
+github.com/goreleaser/goreleaser v0.175.0 h1:wMth9qMjWDoQ6VKdezQg7exRq4ew1lLVXvZDf+IU258=
+github.com/goreleaser/goreleaser v0.175.0/go.mod h1:5scdy2DWQ43BrazQ0b3ZrxO6Zd9i4h+uKFM9OCWJt+c=
 github.com/goreleaser/nfpm/v2 v2.6.0 h1:bwDU9o4/CVTSpqASJA7+r+rkqpTGamQKYHMRH3wDlRE=
 github.com/goreleaser/nfpm/v2 v2.6.0/go.mod h1:qaMnjBaZz/2vInOIWx0IbuKuaZpaVB6O8oLG0u4qH1Y=
 github.com/gorhill/cronexpr v0.0.0-20180427100037-88b0669f7d75/go.mod h1:g2644b03hfBX9Ov0ZBDgXXens4rxSxmqFBbhvKv2yVA=
@@ -951,8 +952,8 @@ github.com/valyala/fasthttp v1.16.0/go.mod h1:YOKImeEosDdBPnxc0gy7INqi3m1zK6A+xl
 github.com/valyala/quicktemplate v1.6.3/go.mod h1:fwPzK2fHuYEODzJ9pkw0ipCPNHZ2tD5KW4lOuSdPKzY=
 github.com/valyala/tcplisten v0.0.0-20161114210144-ceec8f93295a/go.mod h1:v3UYOV9WzVtRmSR+PDvWpU/qWl4Wa5LApYYX4ZtKbio=
 github.com/viki-org/dnscache v0.0.0-20130720023526-c70c1f23c5d8/go.mod h1:dniwbG03GafCjFohMDmz6Zc6oCuiqgH6tGNyXTkHzXE=
-github.com/xanzy/go-gitlab v0.50.1 h1:eH1G0/ZV1j81rhGrtbcePjbM5Ern7mPA4Xjt+yE+2PQ=
-github.com/xanzy/go-gitlab v0.50.1/go.mod h1:Q+hQhV508bDPoBijv7YjK/Lvlb4PhVhJdKqXVQrUoAE=
+github.com/xanzy/go-gitlab v0.50.3 h1:M7ncgNhCN4jaFNyXxarJhCLa9Qi6fdmCxFFhMTQPZiY=
+github.com/xanzy/go-gitlab v0.50.3/go.mod h1:Q+hQhV508bDPoBijv7YjK/Lvlb4PhVhJdKqXVQrUoAE=
 github.com/xanzy/ssh-agent v0.2.1/go.mod h1:mLlQY/MoOhWBj+gOGMQkOeiEvkx+8pJSI+0Bx9h2kr4=
 github.com/xanzy/ssh-agent v0.3.0 h1:wUMzuKtKilRgBAD1sUb8gOwwRr2FGoBVumcjoOACClI=
 github.com/xanzy/ssh-agent v0.3.0/go.mod h1:3s9xbODqPuuhK9JV1R321M/FlMZSBvE5aY6eAcqrDh0=
@@ -1299,6 +1300,7 @@ golang.org/x/tools v0.0.0-20200227222343-706bc42d1f0d/go.mod h1:TB2adYChydJhpapK
 golang.org/x/tools v0.0.0-20200304193943-95d2e580d8eb/go.mod h1:o4KQGtdN14AW+yjsvvwRTJJuXz8XRtIHtEnmAXLyFUw=
 golang.org/x/tools v0.0.0-20200312045724-11d5b4c81c7d/go.mod h1:o4KQGtdN14AW+yjsvvwRTJJuXz8XRtIHtEnmAXLyFUw=
 golang.org/x/tools v0.0.0-20200324003944-a576cf524670/go.mod h1:Sl4aGygMT6LrqrWclx+PTx3U+LnKx/seiNR+3G19Ar8=
+golang.org/x/tools v0.0.0-20200325010219-a49f79bcc224/go.mod h1:Sl4aGygMT6LrqrWclx+PTx3U+LnKx/seiNR+3G19Ar8=
 golang.org/x/tools v0.0.0-20200329025819-fd4102a86c65/go.mod h1:Sl4aGygMT6LrqrWclx+PTx3U+LnKx/seiNR+3G19Ar8=
 golang.org/x/tools v0.0.0-20200331025713-a30bf2db82d4/go.mod h1:Sl4aGygMT6LrqrWclx+PTx3U+LnKx/seiNR+3G19Ar8=
 golang.org/x/tools v0.0.0-20200414032229-332987a829c3/go.mod h1:EkVYQZoAsY45+roYkvgYkIh4xh/qjgUK9TdY2XT94GE=
