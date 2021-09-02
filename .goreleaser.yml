@@ -18,8 +18,7 @@ release:
   github:
   prerelease: auto
 dockers:
-  - binaries:
-    - "{{ .ProjectName }}"
+  -
     image_templates:
     - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:latest"
     - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}"
