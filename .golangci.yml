@@ -43,7 +43,7 @@ linters:
     - gocyclo
     - godot
     - gofumpt
-    - golint
+    - revive
     - gomnd
     - goprintffuncname
     - gosec
