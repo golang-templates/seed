@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/golangci/golangci-lint v1.47.2
-	github.com/goreleaser/goreleaser v1.10.2
+	github.com/goreleaser/goreleaser v1.10.3
 )
 
 require (
