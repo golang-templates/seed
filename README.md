@@ -142,7 +142,7 @@ release:
   prerelease: auto
 ```
 
-Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look how it is done in [taskflow](https://github.com/pellared/taskflow).
+Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look how it is done in [goyek](https://github.com/goyek/goyek).
 
 ### Why the code coverage results are not accurate
 
