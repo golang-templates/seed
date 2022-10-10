@@ -73,8 +73,6 @@ _CAUTION_: Make sure to understand the consequences before you bump the major ve
 
 ## Maintainance
 
-Remember to update the Go version in [.github/workflows](.github/workflows).
-
 Notable files:
 
 - [.github/workflows](.github/workflows) - GitHub Actions workflows,
