@@ -1,9 +1,4 @@
 {
-    // gopls with gofumpt and import ordering
-    "go.useLanguageServer": true,
-    "gopls": {
-        "gofumpt": true,
-    },
     "[go]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
@@ -16,7 +11,12 @@
             "source.organizeImports": true,
         },
     },
-
+    // gopls
+    "go.useLanguageServer": true,
+    "gopls": {
+        "formatting.local": "github.com/golang-templates/seed",
+        "formatting.gofumpt": true
+    },
     // golangci-lint  
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
