@@ -25,7 +25,7 @@ It includes:
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
-- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
+- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) support.
 
 `Star` this repository if you find it valuable and worth maintaining.
 
@@ -48,27 +48,11 @@ It includes:
 Below you can find sample instructions on how to set up the development environment.
 Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el). However take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
 
-### Local Machine
-
-Follow these steps if you are OK installing and using Go on your machine.
-
 1. Install [Go](https://golang.org/doc/install).
 1. Install [Visual Studio Code](https://code.visualstudio.com/).
 1. Install [Go extension](https://code.visualstudio.com/docs/languages/go).
 1. Clone and open this repository.
 1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
-
-### Development Container
-
-Follow these steps if you do not want to install Go on your machine and you prefer to use a Development Container instead.
-
-1. Install [Visual Studio Code](https://code.visualstudio.com/).
-1. Follow [Developing inside a Container - Getting Started](https://code.visualstudio.com/docs/remote/containers#_getting-started).
-1. Clone and open this repository.
-1. `F1` -> `Remote-Containers: Reopen in Container`.
-1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
-
-The Development Container configuration mixes [Docker in Docker](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker) and [Go](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/go) definitions. Thanks to it you can use `go`, `docker`, `docker-compose` inside the container.
 
 ## Build
 
@@ -89,11 +73,10 @@ _CAUTION_: Make sure to understand the consequences before you bump the major ve
 
 ## Maintainance
 
-Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
+Remember to update Go version in [.github/workflows](.github/workflows) and [Makefile](Makefile).
 
 Notable files:
 
-- [devcontainer.json](.devcontainer/devcontainer.json) - Visual Studio Code Remote Container configuration,
 - [.github/workflows](.github/workflows) - GitHub Actions workflows,
 - [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
 - [.vscode](.vscode) - Visual Studio Code configuration files,
@@ -110,7 +93,7 @@ Notable files:
 
 Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
 
-You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) directories if it really does not help you.
+You can always remove the [.vscode](.vscode) directory if it really does not help you.
 
 ### Why GitHub Actions, not any other CI server
 
