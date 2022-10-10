@@ -108,24 +108,6 @@ Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and copy `C:\TDM-GCC-64\b
 
 Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers). However, take into consideration that then you are not going to use "bare-metal" Windows.
 
-### How can I create an application installation script
-
-1. Install [GoDownloader](https://github.com/goreleaser/godownloader).
-
-1. Execute:
-
-    ```bash
-    godownloader --repo=your_org/repo_name > ./install.sh
-    ```
-
-1. Push `install.sh` to your repository.
-
-1. Add installation instructions to your `README.md` e.g.:
-
-    ```bash
-    curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
-    ```
-
 ### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
 
 Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
