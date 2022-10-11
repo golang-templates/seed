@@ -16,7 +16,9 @@ archives:
         format: zip
 release:
   github:
+  name_template: "{{.Version}}"
   prerelease: auto
+  mode: append
 dockers:
   - image_templates:
     - "ghcr.io/golang-templates/seed:latest"
