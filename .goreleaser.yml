@@ -2,28 +2,27 @@ before:
   hooks:
     - go mod download
 builds:
-- env:
-    - CGO_ENABLED=0
-  goos:
-    - darwin
-    - linux
-    - windows
-  goarch:
-    - amd64
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
 archives:
-- format_overrides:
-    - goos: windows
-      format: zip
+  - format_overrides:
+      - goos: windows
+        format: zip
 release:
   github:
   prerelease: auto
 dockers:
-  -
-    image_templates:
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:latest"
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}"
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}"
-    - "docker.pkg.github.com/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
+  - image_templates:
+    - "ghcr.io/golang-templates/seed/{{ .ProjectName }}:latest"
+    - "ghcr.io/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}"
+    - "ghcr.io/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}"
+    - "ghcr.io/golang-templates/seed/{{ .ProjectName }}:{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
     build_flag_templates:
     - "--pull"
     - "--label=org.opencontainers.image.created={{.Date}}"
