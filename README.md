@@ -89,7 +89,11 @@ Notable files:
 
 ### Why Visual Studio Code editor configuration
 
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
+Developers that use Visual Studio Code can take advantage of the editor configuration.
+While others do not have to care about it.
+Setting configs for each repo is unnecessary time consuming.
+VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results))
+and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
 
 You can always remove the [.vscode](.vscode) directory if it really does not help you.
 
@@ -98,46 +102,40 @@ You can always remove the [.vscode](.vscode) directory if it really does not hel
 GitHub Actions is out-of-the-box if you are already using GitHub.
 [Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
 
-However, changing to any other CI server should be very simple, because this repository has build logic and tooling installation in [Makefile](Makefile).
+However, changing to any other CI server should be very simple,
+because this repository has build logic and tooling installation in [Makefile](Makefile).
 
 ### How can I build on Windows
 
-Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/) and copy `C:\TDM-GCC-64\bin\mingw32-make.exe` to `C:\TDM-GCC-64\bin\make.exe`. Alternatively, you may install [mingw-w64](http://mingw-w64.org/doku.php) and copy `mingw32-make.exe` accordingly.
+Install [tdm-gcc](https://jmeubank.github.io/tdm-gcc/)
+and copy `C:\TDM-GCC-64\bin\mingw32-make.exe`
+to `C:\TDM-GCC-64\bin\make.exe`.
+Alternatively, you may install [mingw-w64](http://mingw-w64.org/doku.php)
+and copy `mingw32-make.exe` accordingly.
 
-Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers). However, take into consideration that then you are not going to use "bare-metal" Windows.
+You can also use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers).
+However, take into consideration that then you are not going to use "bare-metal" Windows.
 
-### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
+Consider using [goyek](https://github.com/goyek/goyek)
+for creating cross-platform build pipelines in Go.
 
-Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
+### How can I customize the release
 
-### How can I create a library instead of an application
+Take a look at GoReleaser [docs](https://goreleaser.com/customization/)
+as well as [its repo](https://github.com/goreleaser/goreleaser/)
+how it is dogfooding its functionality.
+You can use it to add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc.
 
-You can change the [.goreleaser.yml](.goreleaser.yml) to contain:
-
-```yaml
-build:
-  skip: true
-release:
-  github:
-  prerelease: auto
-```
-
-Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look how it is done in [goyek](https://github.com/goyek/goyek).
+If you are developing a library and you like handcrafted changelog and release notes,
+you free to remove any usage of GoReleaser.
 
 ### Why the code coverage results are not accurate
 
-By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
-
-### How to automate generating git tags for next release version
-
-Auto-tagging can be done in many ways e.g. by using GitHub Actions like:
-
-- [Github Tag Bump](https://github.com/marketplace/actions/github-tag-bump),
-- [bumpr](https://github.com/marketplace/actions/bumpr-bump-version-when-merging-pull-request-with-specific-labels),
-- [Increment Semantic Version](https://github.com/marketplace/actions/increment-semantic-version),
-- [Github Tag](https://github.com/marketplace/actions/github-tag).
-
-However, creating a release tag manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with `v` prefix is pushed.
+By default `go test` records code coverage for the package that is currently tested.
+If you want to get more accurate (cross-package) coverage,
+then consider using [go-acc](https://github.com/ory/go-acc).
+[Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
 ## Contributing
 
