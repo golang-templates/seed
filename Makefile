@@ -42,7 +42,7 @@ lint: ## golangci-lint
 .PHONY: test
 test: ## go test with race detector and code covarage
 	$(call print-target)
-	go test -race -covermode=atomic -coverprofile=coverage.out ./...
+	go-acc --covermode=atomic --output=coverage.out ./... -- -race
 	go tool cover -html=coverage.out -o coverage.html
 
 .PHONY: mod-tidy
