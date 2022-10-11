@@ -117,13 +117,18 @@ You can also use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/
 or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers).
 However, take into consideration that then you are not going to use "bare-metal" Windows.
 
-### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
+Consider using [goyek](https://github.com/goyek/goyek)
+for creating cross-platform build pipelines in Go.
 
-Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
+### How can I customize the release
 
-###  How can I create a library instead of an application
+Take a look at GoReleaser [docs](https://goreleaser.com/customization/)
+as well as [its repo](https://github.com/goreleaser/goreleaser/)
+how it is dogfooding its functionality.
+You can use it to add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc.
 
-Remove the usage of GoReleaser if you like handcrafted changelog and release notes.
+If you are developing a library and you like handcrafted changelog and release notes,
+you free to remove any usage of GoReleaser.
 
 ### Why the code coverage results are not accurate
 
