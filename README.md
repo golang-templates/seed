@@ -21,7 +21,11 @@ It includes:
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector), code covarage [HTML report](https://blog.golang.org/cover) and [Codecov report](https://codecov.io/),
+- unit testing with [testify](https://github.com/stretchr/testify),
+  [go-acc](https://github.com/ory/go-acc),
+  [race detector](https://blog.golang.org/race-detector),
+  code covarage [HTML report](https://blog.golang.org/cover)
+  and [Codecov report](https://codecov.io/),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
@@ -129,13 +133,6 @@ You can use it to add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest et
 
 If you are developing a library and you like handcrafted changelog and release notes,
 you free to remove any usage of GoReleaser.
-
-### Why the code coverage results are not accurate
-
-By default `go test` records code coverage for the package that is currently tested.
-If you want to get more accurate (cross-package) coverage,
-then consider using [go-acc](https://github.com/ory/go-acc).
-[Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
 ## Contributing
 
