@@ -2,7 +2,7 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean install generate vet fmt lint test mod-tidy
+dev: clean install generate lint test mod-tidy
 
 .PHONY: ci
 ci: ## CI build
@@ -24,20 +24,10 @@ generate: ## go generate
 	$(call print-target)
 	go generate ./...
 
-.PHONY: vet
-vet: ## go vet
-	$(call print-target)
-	go vet ./...
-
-.PHONY: fmt
-fmt: ## go fmt
-	$(call print-target)
-	go fmt ./...
-
 .PHONY: lint
-lint: ## golangci-lint
+lint: ## golangci-lint run --fix
 	$(call print-target)
-	golangci-lint run
+	golangci-lint run --fix
 
 .PHONY: test
 test: ## go test with race detector and code covarage
