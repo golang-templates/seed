@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove info about GoDownloader as it is deprecated. ([#202](https://github.com/golang-templates/seed/pull/202))
 - Remove testify. ([#209](https://github.com/golang-templates/seed/pull/209))
 
-## Fixed
+### Fixed
 
 - Add `workflow_dispatch` to all workflows. ([#204](https://github.com/golang-templates/seed/pull/204))
 - Fix docker image name. ([#205](https://github.com/golang-templates/seed/pull/205))
