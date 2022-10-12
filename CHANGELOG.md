@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `workflow_dispatch` to all workflows. ([#204](https://github.com/golang-templates/seed/pull/204))
 - Fix docker image name. ([#205](https://github.com/golang-templates/seed/pull/205))
+- Fix CodeQL GH workflow permissions. ([#216](https://github.com/golang-templates/seed/pull/216))
 
 ## [0.15.0](https://github.com/golang-templates/seed/releases/tag/v0.15.0)
 
