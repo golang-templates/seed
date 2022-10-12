@@ -29,13 +29,16 @@ jobs:
       - name: Upload coverage
         uses: actions/upload-artifact@v3
         with:
-          name: coverage
+          name: coverage-${{ matrix.os }}
           path: coverage.*
+
+      - run: goreleaser release --rm-dist --snapshot
+        if: ${{ runner.os == 'Linux' }}
 
       - name: Upload dist
         uses: actions/upload-artifact@v3
         with:
-          name: dist
+          name: dist-${{ matrix.os }}
           path: dist
 
       - name: Upload coverage to Codecov
@@ -44,16 +47,3 @@ jobs:
           file: ./coverage.out
           flags: ${{ runner.os }}
 
-  release-test:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-go@v3
-        with:
-          go-version: 1.19
-
-      - name: Release test
-        run: make build
