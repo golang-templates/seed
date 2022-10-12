@@ -29,6 +29,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Release
-        run: make release
+        run: make install release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

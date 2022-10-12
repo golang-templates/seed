@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 .PHONY: dev
 dev: ## dev build
-dev: clean mod-tidy install misspell generate lint test
+dev: clean mod-tidy install misspell generate lint test build
 
 .PHONY: ci
 ci: ## CI build
@@ -55,16 +55,15 @@ diff: ## git diff
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
 .PHONY: build
-build: ## goreleaser --snapshot --skip-publish --rm-dist
-build: install
+build: ## goreleaser build
+build:
 	$(call print-target)
-	goreleaser --snapshot --skip-publish --rm-dist
+	goreleaser build --rm-dist --single-target
 
 .PHONY: release
-release: ## goreleaser --rm-dist
-release: install
+release: ## goreleaser release
 	$(call print-target)
-	goreleaser --rm-dist
+	goreleaser release --rm-dist
 
 .PHONY: run
 run: ## go run
