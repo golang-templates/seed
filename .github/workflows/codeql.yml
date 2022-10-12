@@ -12,7 +12,11 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
     runs-on: ubuntu-latest
 
     strategy:
