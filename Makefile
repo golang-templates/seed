@@ -23,7 +23,8 @@ clean: ## remove files created during build pipeline
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
-	go clean -r -i -cache -testcache -modcache
+	rm -f '"$(shell go env GOCACHE)/../golangci-lint"'
+	go clean -i -cache -testcache -modcache -fuzzcache -x
 
 .PHONY: mod-tidy
 mod-tidy: ## go mod tidy
