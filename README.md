@@ -117,6 +117,9 @@ to `C:\TDM-GCC-64\bin\make.exe`.
 Alternatively, you may install [mingw-w64](http://mingw-w64.org/doku.php)
 and copy `mingw32-make.exe` accordingly.
 
+Take a look [here](https://github.com/docker-archive/toolbox/issues/673#issuecomment-355275054),
+if you have problems using Docker in Git Bash.
+
 You can also use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 or develop inside a [Remote Container](https://code.visualstudio.com/docs/remote/containers).
 However, take into consideration that then you are not going to use "bare-metal" Windows.
