@@ -12,15 +12,16 @@
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
-- create a new repoisitory with basic Continous Integration.
+- create a new repoisitory with basic Continuous Integration.
 
 It includes:
 
-- continous integration via [GitHub Actions](https://github.com/features/actions),
+- continuous integration via [GitHub Actions](https://github.com/features/actions),
 - build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
-- linting with [golangci-lint](https://github.com/golangci/golangci-lint),
+- linting with [golangci-lint](https://github.com/golangci/golangci-lint)
+  and [misspell](https://github.com/client9/misspell),
 - unit testing with [go-acc](https://github.com/ory/go-acc),
   [race detector](https://blog.golang.org/race-detector),
   code covarage [HTML report](https://blog.golang.org/cover)
@@ -38,8 +39,8 @@ It includes:
 
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
+1. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
+1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
    - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
@@ -74,7 +75,7 @@ The release workflow is triggered each time a tag with `v` prefix is pushed.
 
 _CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
 
-## Maintainance
+## Maintenance
 
 Notable files:
 

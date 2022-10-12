@@ -3,6 +3,7 @@ module github.com/golang-templates/seed/build
 go 1.18
 
 require (
+	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.50.0
 	github.com/goreleaser/goreleaser v1.11.5
 	github.com/ory/go-acc v0.2.8
