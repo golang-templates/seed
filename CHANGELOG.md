@@ -15,8 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Use go-acc. ([#208](https://github.com/golang-templates/seed/pull/208))
-- Add misspell. ([#211](https://github.com/golang-templates/seed/pull/211))
+- Use [go-acc](https://github.com/ory/go-acc). ([#208](https://github.com/golang-templates/seed/pull/208))
+- Add [misspell](https://github.com/client9/misspell). ([#211](https://github.com/golang-templates/seed/pull/211))
 - Document docker vs Git Bash workaround. ([#212](https://github.com/golang-templates/seed/pull/212))
 
 ### Changed
