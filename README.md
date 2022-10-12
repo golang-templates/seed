@@ -9,10 +9,17 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 [![Codecov](https://codecov.io/gh/golang-templates/seed/branch/main/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
 
-This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
+⭐ `Star` this repository if you find it valuable and worth maintaining.
 
-- quickly get into Go without losing too much time on environment setup,
-- create a new repoisitory with basic Continuous Integration.
+👁 `Watch` this repository to get notified about new releases, issues, etc.
+
+## Description
+
+This is a GitHub repository template for a Go application.
+You can use it:
+
+- to create a new repoisitory with automation and environment setup,
+- as reference when improving automation for an existing repository.
 
 It includes:
 
@@ -31,13 +38,10 @@ It includes:
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) support.
 
-`Star` this repository if you find it valuable and worth maintaining.
-
-`Watch` this repository to get notified about new releases, issues, etc.
-
 ## Usage
 
-1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
+1. Sign up on [Codecov](https://codecov.io/) and configure
+   [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
@@ -50,7 +54,10 @@ It includes:
 ## Setup
 
 Below you can find sample instructions on how to set up the development environment.
-Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el). However take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
+Of course, you can use other tools like [GoLand](https://www.jetbrains.com/go/),
+[Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el).
+However, take notice that the Visual Studio Go extension is
+[officially supported](https://blog.golang.org/vscode-go) by the Go team.
 
 1. Install [Go](https://golang.org/doc/install).
 1. Install [Visual Studio Code](https://code.visualstudio.com/).
@@ -73,7 +80,9 @@ Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), 
 
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
-_CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
+_CAUTION_: Make sure to understand the consequences before you bump the major version.
+More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher),
+[Go Blog](https://blog.golang.org/v2-go-modules).
 
 ## Maintenance
 
@@ -135,8 +144,10 @@ how it is dogfooding its functionality.
 You can use it to add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc.
 
 If you are developing a library and you like handcrafted changelog and release notes,
-you free to remove any usage of GoReleaser.
+you are free to remove any usage of GoReleaser.
 
 ## Contributing
 
-Simply create an issue or a pull request.
+Feel free to create an issue or propose a pull request.
+
+Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
