@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 .PHONY: dev
 dev: ## dev build
-dev: clean misspell mod-tidy install generate lint test
+dev: clean mod-tidy install misspell generate lint test
 
 .PHONY: ci
 ci: ## CI build
@@ -16,11 +16,6 @@ clean: ## remove files created during build pipeline
 	rm -rf dist
 	rm -f coverage.*
 
-.PHONY: misspell
-misspell: ## misspell
-	$(call print-target)
-	misspell -error -locale=US -w **.md
-
 .PHONY: mod-tidy
 mod-tidy: ## go mod tidy
 	$(call print-target)
@@ -31,6 +26,11 @@ mod-tidy: ## go mod tidy
 install: ## go install tools
 	$(call print-target)
 	cd tools && go install $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
+
+.PHONY: misspell
+misspell: ## misspell
+	$(call print-target)
+	misspell -error -locale=US -w **.md
 
 .PHONY: generate
 generate: ## go generate
