@@ -139,4 +139,6 @@ you are free to remove any usage of GoReleaser.
 
 ## Contributing
 
-Simply create an issue or a pull request.
+Feel free to create an issue or propose a pull request.
+
+Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
