@@ -1,20 +1,29 @@
 SHELL := /bin/bash
 
+### Pipelines:
+
 .DEFAULT_GOAL := dev
 
 .PHONY: dev
 dev: ## dev build
-dev: clean mod-tidy install misspell generate lint test build
+dev: mod-tidy install misspell generate lint test build
 
 .PHONY: ci
 ci: ## CI build
 ci: dev diff
+
+### Tasks:
+
+.PHONY: help
+help:
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: clean
 clean: ## remove files created during build pipeline
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
+	go clean -r -i -cache -testcache -modcache
 
 .PHONY: mod-tidy
 mod-tidy: ## go mod tidy
@@ -54,29 +63,6 @@ diff: ## git diff
 	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
-.PHONY: build
-build: ## goreleaser build
-build:
-	$(call print-target)
-	goreleaser build --rm-dist --single-target
-
-.PHONY: release
-release: ## goreleaser release
-	$(call print-target)
-	goreleaser release --rm-dist
-
-.PHONY: run
-run: ## go run
-	@go run -race .
-
-.PHONY: go-clean
-go-clean: ## go clean build, test and modules caches
-	$(call print-target)
-	go clean -r -i -cache -testcache -modcache
-
-.PHONY: help
-help:
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 define print-target
     @printf "Executing target: \033[36m$@\033[0m\n"
