@@ -3,6 +3,7 @@ module github.com/golang-templates/seed/build
 go 1.18
 
 require (
+	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.50.0
 	github.com/goreleaser/goreleaser v1.11.5
 	github.com/ory/go-acc v0.2.8
@@ -172,7 +173,7 @@ require (
 	github.com/jingyugao/rowserrcheck v1.1.1 // indirect
 	github.com/jirfag/go-printf-func-name v0.0.0-20200119135958-7558a9eaa5af // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
-	github.com/julz/importas v0.1.0 // indirect
+	github.com/julz/imports v0.1.0 // indirect
 	github.com/kevinburke/ssh_config v1.1.0 // indirect
 	github.com/kisielk/errcheck v1.6.2 // indirect
 	github.com/kisielk/gotool v1.0.0 // indirect

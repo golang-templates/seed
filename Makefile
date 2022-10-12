@@ -1,8 +1,10 @@
+SHELL := /bin/bash
+
 .DEFAULT_GOAL := dev
 
 .PHONY: dev
 dev: ## dev build
-dev: clean mod-tidy install generate lint test
+dev: clean misspell mod-tidy install generate lint test
 
 .PHONY: ci
 ci: ## CI build
@@ -13,6 +15,11 @@ clean: ## remove files created during build pipeline
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
+
+.PHONY: misspell
+misspell: ## misspell
+	$(call print-target)
+	misspell -error -locale=US -w **.md
 
 .PHONY: mod-tidy
 mod-tidy: ## go mod tidy
@@ -31,12 +38,12 @@ generate: ## go generate
 	go generate ./...
 
 .PHONY: lint
-lint: ## golangci-lint run --fix
+lint: ## golangci-lint
 	$(call print-target)
 	golangci-lint run --fix
 
 .PHONY: test
-test: ## go test with race detector and code covarage
+test: ## go test
 	$(call print-target)
 	go-acc --covermode=atomic --output=coverage.out ./... -- -race
 	go tool cover -html=coverage.out -o coverage.html
