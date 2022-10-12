@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/golang-templates/seed/compare/v0.16.0...HEAD)
 
-### Changed
+### Fixed
 
-- Refine GH workflows and Makefile. ([#217](https://github.com/golang-templates/seed/pull/217))
+- Improve GH workflows and Makefile. ([#217](https://github.com/golang-templates/seed/pull/217))
 
 ## [0.16.0](https://github.com/golang-templates/seed/releases/tag/v0.16.0)
 
