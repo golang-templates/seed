@@ -1,7 +1,6 @@
 SHELL := /bin/bash
 
 .DEFAULT_GOAL := dev
-
 .PHONY: dev
 dev: ## dev build
 dev: mod-tidy install misspell generate lint test build
