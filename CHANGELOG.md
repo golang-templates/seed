@@ -5,7 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/golang-templates/seed/compare/v0.15.0...HEAD)
+## [Unreleased](https://github.com/golang-templates/seed/compare/v0.16.0...HEAD)
+
+## [0.16.0](https://github.com/golang-templates/seed/releases/tag/v0.16.0)
+
+### Added 
+
+- Use go-acc. ([#208](https://github.com/golang-templates/seed/pull/208))
+- Add misspell. ([#211](https://github.com/golang-templates/seed/pull/211))
+- Document docker vs Git Bash workaround. ([#212](https://github.com/golang-templates/seed/pull/212))
+
+### Changed
+
+- Update golangci-lint configuration. ([#196](https://github.com/golang-templates/seed/pull/196))
+- Update Visual Studio code configuration. ([#197](https://github.com/golang-templates/seed/pull/197))
+- Migrate to ghcr.io. ([#203](https://github.com/golang-templates/seed/pull/203))
+- Use SemVer version as release name. ([#206](https://github.com/golang-templates/seed/pull/206))
+- Manual changelog. ([#207](https://github.com/golang-templates/seed/pull/207))
+- Update Makefile. ([#210](https://github.com/golang-templates/seed/pull/210))
+- Bump dependencies.
+
+### Removed
+
+- Remove VS Code Remote Container support. ([#199](https://github.com/golang-templates/seed/pull/199))
+- Remove info about GoDownloader as it is deprecated. ([#202](https://github.com/golang-templates/seed/pull/202))
+- Remove testify. ([#209](https://github.com/golang-templates/seed/pull/209))
+
+## Fixed
+
+- Add `workflow_dispatch` to all workflows. ([#204](https://github.com/golang-templates/seed/pull/204))
+- Fix docker image name. ([#205](https://github.com/golang-templates/seed/pull/205))
 
 ## [0.15.0](https://github.com/golang-templates/seed/releases/tag/v0.15.0)
 
