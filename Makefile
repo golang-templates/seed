@@ -2,7 +2,7 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean install generate lint test mod-tidy
+dev: clean mod-tidy install generate lint test
 
 .PHONY: ci
 ci: ## CI build
@@ -13,6 +13,12 @@ clean: ## remove files created during build pipeline
 	$(call print-target)
 	rm -rf dist
 	rm -f coverage.*
+
+.PHONY: mod-tidy
+mod-tidy: ## go mod tidy
+	$(call print-target)
+	go mod tidy
+	cd tools && go mod tidy
 
 .PHONY: install
 install: ## go install tools
@@ -34,12 +40,6 @@ test: ## go test with race detector and code covarage
 	$(call print-target)
 	go-acc --covermode=atomic --output=coverage.out ./... -- -race
 	go tool cover -html=coverage.out -o coverage.html
-
-.PHONY: mod-tidy
-mod-tidy: ## go mod tidy
-	$(call print-target)
-	go mod tidy
-	cd tools && go mod tidy
 
 .PHONY: diff
 diff: ## git diff
