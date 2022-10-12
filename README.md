@@ -9,6 +9,12 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 [![Codecov](https://codecov.io/gh/golang-templates/seed/branch/main/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
 
+⭐ `Star` this repository if you find it valuable and worth maintaining.
+
+👁 `Watch` this repository to get notified about new releases, issues, etc.
+
+## Description
+
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
@@ -30,10 +36,6 @@ It includes:
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) support.
-
-`Star` this repository if you find it valuable and worth maintaining.
-
-`Watch` this repository to get notified about new releases, issues, etc.
 
 ## Usage
 
