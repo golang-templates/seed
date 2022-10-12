@@ -40,7 +40,8 @@ It includes:
 
 ## Usage
 
-1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
+1. Sign up on [Codecov](https://codecov.io/) and configure
+   [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
@@ -53,7 +54,10 @@ It includes:
 ## Setup
 
 Below you can find sample instructions on how to set up the development environment.
-Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el). However take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
+Of course, you can use other tools like [GoLand](https://www.jetbrains.com/go/),
+[Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el).
+However, take notice that the Visual Studio Go extension is
+[officially supported](https://blog.golang.org/vscode-go) by the Go team.
 
 1. Install [Go](https://golang.org/doc/install).
 1. Install [Visual Studio Code](https://code.visualstudio.com/).
@@ -76,7 +80,9 @@ Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), 
 
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
-_CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
+_CAUTION_: Make sure to understand the consequences before you bump the major version.
+More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher),
+[Go Blog](https://blog.golang.org/v2-go-modules).
 
 ## Maintenance
 
