@@ -1,7 +1,5 @@
 SHELL := /bin/bash
 
-### Pipelines:
-
 .DEFAULT_GOAL := dev
 
 .PHONY: dev
@@ -11,8 +9,6 @@ dev: mod-tidy install misspell generate lint test build
 .PHONY: ci
 ci: ## CI build
 ci: dev diff
-
-### Tasks:
 
 .PHONY: help
 help:
