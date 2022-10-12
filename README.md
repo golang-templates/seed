@@ -135,7 +135,7 @@ how it is dogfooding its functionality.
 You can use it to add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc.
 
 If you are developing a library and you like handcrafted changelog and release notes,
-you free to remove any usage of GoReleaser.
+you are free to remove any usage of GoReleaser.
 
 ## Contributing
 
