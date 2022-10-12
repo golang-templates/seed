@@ -15,10 +15,11 @@
 
 ## Description
 
-This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
+This is a GitHub repository template for a Go application.
+You can use it:
 
-- quickly get into Go without losing too much time on environment setup,
-- create a new repoisitory with basic Continuous Integration.
+- to create a new repoisitory with automation and environment setup,
+- as reference when improving automation for an existing repository.
 
 It includes:
 
