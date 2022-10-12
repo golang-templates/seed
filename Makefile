@@ -57,6 +57,12 @@ test: ## go test
 	go-acc --covermode=atomic --output=coverage.out ./... -- -race
 	go tool cover -html=coverage.out -o coverage.html
 
+.PHONY: build
+build: ## goreleaser build
+build:
+	$(call print-target)
+	goreleaser build --rm-dist --single-target --snapshot
+
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
