@@ -50,7 +50,7 @@ lint: ## golangci-lint
 .PHONY: test
 test: ## go test
 	$(call print-target)
-	go-acc --covermode=atomic --output=coverage.out ./... -- -race
+	go test -race -covermode=atomic -coverprofile=coverage.out -coverpkg=./... ./...
 	go tool cover -html=coverage.out -o coverage.html
 
 .PHONY: build

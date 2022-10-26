@@ -29,7 +29,7 @@ It includes:
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint)
   and [misspell](https://github.com/client9/misspell),
-- unit testing with [go-acc](https://github.com/ory/go-acc),
+- unit testing with
   [race detector](https://blog.golang.org/race-detector),
   code covarage [HTML report](https://blog.golang.org/cover)
   and [Codecov report](https://codecov.io/),

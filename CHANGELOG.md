@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/golang-templates/seed/compare/v0.16.1...HEAD)
 
+### Removed
+
+- Remove [go-acc](https://github.com/ory/go-acc) and use `coverpkg` flag instead. ([#221](https://github.com/golang-templates/seed/pull/221))
+
 ## [0.16.1](https://github.com/golang-templates/seed/releases/tag/v0.16.1)
 
 ### Fixed
