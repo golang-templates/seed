@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/golang-templates/seed/compare/v0.16.1...HEAD)
+## [Unreleased](https://github.com/golang-templates/seed/compare/v0.16.2...HEAD)
+
+## [0.16.2](https://github.com/golang-templates/seed/releases/tag/v0.16.2)
+
+### Changed
+
+- Update golangci-lint configuration. ([#222](https://github.com/golang-templates/seed/pull/222))
 
 ### Removed
 
