@@ -1,4 +1,7 @@
 linters-settings:
+  funlen:
+    lines: 100
+    statements: 50
   gocyclo:
     min-complexity: 15
   goimports:
@@ -18,7 +21,9 @@ linters-settings:
 linters:
   disable-all: true
   enable:
+    - bodyclose
     - dogsled
+    - dupl
     - errcheck
     - exportloopref
     - funlen
@@ -36,6 +41,8 @@ linters:
     - govet
     - ineffassign
     - misspell
+    - nakedret
+    - noctx
     - nolintlint
     - staticcheck
     - stylecheck
