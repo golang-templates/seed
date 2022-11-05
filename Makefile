@@ -1,13 +1,13 @@
 SHELL := /bin/bash
 
-.DEFAULT_GOAL := dev
-.PHONY: dev
-dev: ## dev build
-dev: mod-tidy install misspell generate lint test build
+.DEFAULT_GOAL := all
+.PHONY: all
+all: ## build pipeline
+all: mod inst gen build spell lint test
 
 .PHONY: ci
-ci: ## CI build
-ci: dev diff
+ci: ## CI build pipeline
+ci: all diff
 
 .PHONY: help
 help:
@@ -21,26 +21,32 @@ clean: ## remove files created during build pipeline
 	rm -f '"$(shell go env GOCACHE)/../golangci-lint"'
 	go clean -i -cache -testcache -modcache -fuzzcache -x
 
-.PHONY: mod-tidy
-mod-tidy: ## go mod tidy
+.PHONY: mod
+mod: ## go mod tidy
 	$(call print-target)
 	go mod tidy
 	cd tools && go mod tidy
 
-.PHONY: install
-install: ## go install tools
+.PHONY: inst
+inst: ## go install tools
 	$(call print-target)
 	cd tools && go install $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
 
-.PHONY: misspell
-misspell: ## misspell
-	$(call print-target)
-	misspell -error -locale=US -w **.md
-
-.PHONY: generate
-generate: ## go generate
+.PHONY: gen
+gen: ## go generate
 	$(call print-target)
 	go generate ./...
+
+.PHONY: build
+build: ## goreleaser build
+build:
+	$(call print-target)
+	goreleaser build --rm-dist --single-target --snapshot
+
+.PHONY: spell
+spell: ## misspell
+	$(call print-target)
+	misspell -error -locale=US -w **.md
 
 .PHONY: lint
 lint: ## golangci-lint
@@ -52,12 +58,6 @@ test: ## go test
 	$(call print-target)
 	go test -race -covermode=atomic -coverprofile=coverage.out -coverpkg=./... ./...
 	go tool cover -html=coverage.out -o coverage.html
-
-.PHONY: build
-build: ## goreleaser build
-build:
-	$(call print-target)
-	goreleaser build --rm-dist --single-target --snapshot
 
 .PHONY: diff
 diff: ## git diff
