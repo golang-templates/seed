@@ -1,7 +1,6 @@
 linters-settings:
   errcheck:
     check-blank: true
-    disable-default-exclusions: true
   funlen:
     lines: 100
     statements: 50
