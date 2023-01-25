@@ -5,7 +5,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/golang-templates/seed.svg)](https://pkg.go.dev/github.com/golang-templates/seed)
 [![go.mod](https://img.shields.io/github/go-mod/go-version/golang-templates/seed)](go.mod)
 [![LICENSE](https://img.shields.io/github/license/golang-templates/seed)](LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/golang-templates/seed/build)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amain)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/golang-templates/seed/build.yml?branch=main)](https://github.com/golang-templates/seed/actions?query=workflow%3Abuild+branch%3Amain)
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-templates/seed)](https://goreportcard.com/report/github.com/golang-templates/seed)
 [![Codecov](https://codecov.io/gh/golang-templates/seed/branch/main/graph/badge.svg)](https://codecov.io/gh/golang-templates/seed)
 
