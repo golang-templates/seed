@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/golang-templates/seed/compare/v0.17.1...HEAD)
 
+### Changed
+
+- Remove [gomnd](https://github.com/tommy-muehle/go-mnd) linter. ([#230](https://github.com/golang-templates/seed/pull/230))
+
+### Fixed
+
+- Adjust Build Status badge to new shields.io API. ([#231](https://github.com/golang-templates/seed/pull/231))
+
 ## [0.17.1](https://github.com/golang-templates/seed/releases/tag/v0.17.1)
 
 ### Fixed
