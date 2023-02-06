@@ -45,6 +45,7 @@ linters:
     - nolintlint
     - staticcheck
     - stylecheck
+    - sqlclosecheck
     - typecheck
     - unconvert
     - unparam
