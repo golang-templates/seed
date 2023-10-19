@@ -18,7 +18,7 @@
 This is a GitHub repository template for a Go application.
 You can use it:
 
-- to create a new repoisitory with automation and environment setup,
+- to create a new repository with automation and environment setup,
 - as reference when improving automation for an existing repository.
 
 It includes:
@@ -31,7 +31,7 @@ It includes:
   and [misspell](https://github.com/client9/misspell),
 - unit testing with
   [race detector](https://blog.golang.org/race-detector),
-  code covarage [HTML report](https://blog.golang.org/cover)
+  code coverage [HTML report](https://blog.golang.org/cover)
   and [Codecov report](https://codecov.io/),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
