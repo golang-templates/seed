@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix `inst` Make target for Go 1.21. ([#231](https://github.com/golang-templates/seed/pull/231))
+- Fix `inst` Make target for Go 1.21. ([#269](https://github.com/golang-templates/seed/pull/269))
 
 ## [0.18.0](https://github.com/golang-templates/seed/releases/tag/v0.18.0)
 
