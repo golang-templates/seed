@@ -30,7 +30,7 @@ mod: ## go mod tidy
 .PHONY: inst
 inst: ## go install tools
 	$(call print-target)
-	cd tools && go install $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
+	cd tools && go install $(shell cd tools && go list -e -f '{{ join .Imports " " }}' -tags=tools)
 
 .PHONY: gen
 gen: ## go generate
