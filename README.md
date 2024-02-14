@@ -15,6 +15,8 @@
 
 ## Description
 
+TEST
+
 This is a GitHub repository template for a Go application.
 You can use it:
 
