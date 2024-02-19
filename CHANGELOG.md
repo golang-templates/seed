@@ -5,7 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/golang-templates/seed/compare/v0.18.0...HEAD)
+## [Unreleased](https://github.com/golang-templates/seed/compare/v0.19.0...HEAD)
+
+## [0.19.0](https://github.com/golang-templates/seed/releases/tag/v0.19.0)
+
+### Added
+
+- Add `sqlclosecheck` linter. ([#235](https://github.com/golang-templates/seed/pull/235))
+
+### Changed
+
+- Change license to CC0-1.0. ([#241](https://github.com/golang-templates/seed/pull/241))
+- Update Codecov instructions for v4. ([#289](https://github.com/golang-templates/seed/pull/289))
 
 ### Fixed
 
@@ -105,3 +116,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update [.golangci.yml](https://github.com/golang-templates/seed/blob/v0.14.0/.golangci.yml). ([#127](https://github.com/golang-templates/seed/pull/127))
 - Update [GoReleaser](https://github.com/goreleaser/goreleaser) to [0.162.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.162.0). ([#126](https://github.com/golang-templates/seed/pull/126))
 - Update [golangci-lint](https://github.com/golangci/golangci-lint) to [1.39.0](https://github.com/golangci/golangci-lint/releases/tag/v1.39.0). ([#125](https://github.com/golang-templates/seed/pull/125))
+
+<!-- markdownlint-configure-file
+MD024:
+  # Only check sibling headings
+  siblings_only: true
+-->
