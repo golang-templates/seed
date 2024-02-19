@@ -1,6 +1,6 @@
 module github.com/golang-templates/seed/build
 
-go 1.21
+go 1.22
 
 require (
 	github.com/client9/misspell v0.3.4

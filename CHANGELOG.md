@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/golang-templates/seed/compare/v0.19.0...HEAD)
 
-## [0.18.0](https://github.com/golang-templates/seed/releases/tag/v0.19.0)
+## [0.19.0](https://github.com/golang-templates/seed/releases/tag/v0.19.0)
 
 ### Added
 
