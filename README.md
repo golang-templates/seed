@@ -41,10 +41,12 @@ It includes:
 ## Usage
 
 1. Sign up on [Codecov](https://codecov.io/) and configure
-   [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
+   [Codecov GitHub Application](https://github.com/apps/codecov).
 1. Click the `Use this template` button (alt. clone or download this repository).
 1. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
+1. Follow [these](https://docs.codecov.com/docs/adding-the-codecov-token#github-actions)
+   instructions to add the `CODECOV_TOKEN` GitHub Actions and Dependabot secret.
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
    - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
