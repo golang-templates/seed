@@ -1,0 +1,13 @@
+# https://yamllint.readthedocs.io/en/stable/configuration.html
+extends: default
+
+rules:
+  brackets:
+    max-spaces-inside: 1   # default: 0
+  document-start: disable  # default: level: warning
+  line-length: disable     # default: enable
+  truthy:
+    allowed-values:        # default: ["true", "false"]
+      - "false"
+      - "on"
+      - "true"
