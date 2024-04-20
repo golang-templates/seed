@@ -27,8 +27,9 @@ It includes:
 - build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
-- linting with [golangci-lint](https://github.com/golangci/golangci-lint)
-  and [misspell](https://github.com/client9/misspell),
+- linting with [golangci-lint](https://github.com/golangci/golangci-lint),
+  [misspell](https://github.com/client9/misspell), and
+  [yamllint](https://github.com/adrienverge/yamllint),
 - unit testing with
   [race detector](https://blog.golang.org/race-detector),
   code coverage [HTML report](https://blog.golang.org/cover)
@@ -94,6 +95,7 @@ Notable files:
 - [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
 - [.vscode](.vscode) - Visual Studio Code configuration files,
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration,
+- [.yamllint.yml](.yamllint.yml) - yamllint configuration,
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
 - [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image,
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),

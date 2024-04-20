@@ -31,6 +31,7 @@ mod: ## go mod tidy
 inst: ## go install tools
 	$(call print-target)
 	cd tools && go install $(shell cd tools && go list -e -f '{{ join .Imports " " }}' -tags=tools)
+	pip install --user yamllint
 
 .PHONY: gen
 gen: ## go generate
@@ -51,6 +52,7 @@ spell: ## misspell
 .PHONY: lint
 lint: ## golangci-lint
 	$(call print-target)
+	yamllint .
 	golangci-lint run --fix
 
 .PHONY: test
