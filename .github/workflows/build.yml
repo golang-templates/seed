@@ -1,7 +1,7 @@
 name: build
 
 on:
-  push: 
+  push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
@@ -26,6 +26,7 @@ jobs:
 
       - name: Build
         run: make ci
+
       - name: Upload coverage
         uses: actions/upload-artifact@v4
         with:
