@@ -7,7 +7,7 @@ linters-settings:
   goimports:
     local-prefixes: github.com/golang-templates/seed
   govet:
-    check-shadowing: true
+    shadow: true
   misspell:
     locale: US
   nolintlint:
