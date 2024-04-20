@@ -36,6 +36,7 @@ It includes:
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
+  and [govulncheck](https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) support.
 
 ## Usage
