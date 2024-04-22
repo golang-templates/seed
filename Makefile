@@ -7,7 +7,7 @@ all: mod inst gen build spell lint test
 
 .PHONY: ci
 ci: ## CI build pipeline
-ci: all diff
+ci: all vuln diff
 
 .PHONY: help
 help:
@@ -52,6 +52,11 @@ spell: ## misspell
 lint: ## golangci-lint
 	$(call print-target)
 	golangci-lint run --fix
+
+.PHONY: vuln
+vuln: ## govulncheck
+	$(call print-target)
+	govulncheck ./...
 
 .PHONY: test
 test: ## go test
