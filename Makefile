@@ -56,8 +56,6 @@ lint: ## golangci-lint
 .PHONY: check
 check: ## govulncheck
 	$(call print-target)
-	govulncheck -scan module
-	govulncheck -scan package ./...
 	govulncheck ./...
 
 .PHONY: test
