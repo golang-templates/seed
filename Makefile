@@ -5,9 +5,13 @@ SHELL := /bin/bash
 all: ## build pipeline
 all: mod inst gen build spell lint test
 
+.PHONY: precommit
+precommit: ## validate the branch before commit
+precommit: all vuln
+
 .PHONY: ci
 ci: ## CI build pipeline
-ci: all vuln diff
+ci: precommit diff
 
 .PHONY: help
 help:
@@ -39,7 +43,6 @@ gen: ## go generate
 
 .PHONY: build
 build: ## goreleaser build
-build:
 	$(call print-target)
 	goreleaser build --clean --single-target --snapshot
 
