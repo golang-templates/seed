@@ -8,7 +8,7 @@ replace go.opentelemetry.io/otel/exporters/otlp/internal v0.20.1 => go.opentelem
 require (
 	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.58.2
-	github.com/goreleaser/goreleaser v2.0.0
+	github.com/goreleaser/goreleaser/v2 v2.0.0
 	golang.org/x/vuln v1.1.1
 )
 
