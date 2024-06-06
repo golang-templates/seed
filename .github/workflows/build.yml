@@ -1,7 +1,7 @@
 name: build
 
 on:
-  push: 
+  push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
@@ -32,7 +32,7 @@ jobs:
           name: coverage-${{ matrix.os }}
           path: coverage.*
 
-      - run: goreleaser release --rm-dist --snapshot
+      - run: goreleaser release --clean --snapshot
         if: ${{ runner.os == 'Linux' }}
 
       - name: Upload dist
