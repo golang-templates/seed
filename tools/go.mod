@@ -9,7 +9,7 @@ require (
 	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.59.1
 	github.com/goreleaser/goreleaser/v2 v2.1.0
-	golang.org/x/vuln v1.1.2
+	golang.org/x/vuln v1.1.3
 )
 
 require (
