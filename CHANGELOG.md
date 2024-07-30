@@ -9,22 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add `asasalint` linter.
-- Add `dupword` linter.
-- Add `godot` linter.
-- Add `mnd` linter.
-- Add `perfsprint` linter.
-- Add `EXC0001` exclusion as the most common false postive.
+- Add `asasalint` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Add `dupword` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Add `godot` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Add `mnd` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Add `perfsprint` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Add `EXC0001` exclusion as the most common false postive. ([#328](https://github.com/golang-templates/seed/pull/328))
 
 ### Changed
 
-- Change `nolintlint` linter settings to not allow leading space and require to specific about which linter is being skipped.
-- Change `govet` linter settings to default.
-- Add `
+- Change `nolintlint` linter settings to not allow leading space and require to specific about which linter is being skipped. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Change `govet` linter settings to default. ([#328](https://github.com/golang-templates/seed/pull/328))
 
 ### Removed
 
-- Remove `gochecknoinits` linter.
+- Remove `gochecknoinits` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
 
 ## [0.19.0](https://github.com/golang-templates/seed/releases/tag/v0.19.0)
 
