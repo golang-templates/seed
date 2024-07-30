@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `godot` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
 - Add `mnd` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
 - Add `perfsprint` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
-- Add `EXC0001` exclusion as the most common false postive. ([#328](https://github.com/golang-templates/seed/pull/328))
+- Add `EXC0001` exclusion as the most common false positive. ([#328](https://github.com/golang-templates/seed/pull/328))
 
 ### Changed
 
