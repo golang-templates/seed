@@ -5,10 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/golang-templates/seed/compare/v0.19.0...HEAD)
+## [Unreleased](https://github.com/golang-templates/seed/compare/v0.20.0...HEAD)
+
+## [0.20.0](https://github.com/golang-templates/seed/releases/tag/v0.20.0)
 
 ### Added
 
+- Add `vuln` target which runs [`govulncheck`](https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck). ([#305](https://github.com/golang-templates/seed/pull/305))
+- Add `precommit` target which is a superset of `all` target. ([#309](https://github.com/golang-templates/seed/pull/309))
 - Add `asasalint` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
 - Add `dupword` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
 - Add `godot` linter. ([#328](https://github.com/golang-templates/seed/pull/328))
@@ -18,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Update [GoReleaser](https://github.com/goreleaser/goreleaser) to `v2`. ([#319](https://github.com/golang-templates/seed/pull/319))
 - Change `nolintlint` linter settings to not allow leading space and require to specific about which linter is being skipped. ([#328](https://github.com/golang-templates/seed/pull/328))
 - Change `govet` linter settings to default. ([#328](https://github.com/golang-templates/seed/pull/328))
 
