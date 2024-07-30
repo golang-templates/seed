@@ -6,14 +6,13 @@ linters-settings:
     min-complexity: 15
   goimports:
     local-prefixes: github.com/golang-templates/seed
-  govet:
-    shadow: true
   misspell:
     locale: US
   nolintlint:
+    allow-leading-space: false # require machine-readable nolint directives (with no leading space)
     allow-unused: false # report any unused nolint directives
     require-explanation: true # require an explanation for nolint directives
-    require-specific: false # don't require nolint directives to be specific about which linter is being skipped
+    require-specific: true # require nolint directives to be specific about which linter is being skipped
   revive:
     confidence: 0
 
@@ -21,12 +20,13 @@ linters:
   disable-all: true
   enable:
     - bodyclose
+    - asasalint
     - dogsled
     - dupl
+    - dupword
     - errcheck
     - exportloopref
     - funlen
-    - gochecknoinits
     - gocritic
     - goconst
     - gocyclo
@@ -34,15 +34,18 @@ linters:
     - goimports
     - revive
     - rowserrcheck
+    - godot
     - goprintffuncname
     - gosec
     - gosimple
     - govet
     - ineffassign
     - misspell
+    - mnd
     - nakedret
     - noctx
     - nolintlint
+    - perfsprint
     - staticcheck
     - stylecheck
     - sqlclosecheck
@@ -53,5 +56,5 @@ linters:
     - whitespace
 
 issues:
-  # enable issues excluded by default 
-  exclude-use-default: false
+  exclude:
+    - EXC0001
