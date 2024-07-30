@@ -19,8 +19,8 @@ linters-settings:
 linters:
   disable-all: true
   enable:
-    - bodyclose
     - asasalint
+    - bodyclose
     - dogsled
     - dupl
     - dupword
