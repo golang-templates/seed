@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/golang-templates/seed/compare/v0.19.0...HEAD)
 
+### Added
+
+- Add `asasalint` linter.
+- Add `dupword` linter.
+- Add `godot` linter.
+- Add `mnd` linter.
+- Add `perfsprint` linter.
+- Add `EXC0001` exclusion as the most common false postive.
+
+### Changed
+
+- Change `nolintlint` linter settings to not allow leading space and require to specific about which linter is being skipped.
+- Change `govet` linter settings to default.
+- Add `
+
+### Removed
+
+- Remove `gochecknoinits` linter.
+
 ## [0.19.0](https://github.com/golang-templates/seed/releases/tag/v0.19.0)
 
 ### Added
