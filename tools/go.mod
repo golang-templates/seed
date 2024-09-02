@@ -1,6 +1,7 @@
 module github.com/golang-templates/seed/build
 
 go 1.22.5
+
 // FIXME: temporary fix for go.opentelemetry.io/otel/exporters/otlp/internal v0.20.1
 replace go.opentelemetry.io/otel/exporters/otlp/internal v0.20.1 => go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.43.0
 
