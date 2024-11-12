@@ -5,7 +5,7 @@ go 1.23.0
 require (
 	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.62.0
-	github.com/goreleaser/goreleaser/v2 v2.4.3
+	github.com/goreleaser/goreleaser/v2 v2.4.4
 	golang.org/x/vuln v1.1.3
 )
 
