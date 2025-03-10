@@ -61,6 +61,7 @@ linters:
     - usestdlibvars
     - usetesting
     - whitespace
+
 issues:
   exclude:
     - EXC0001
