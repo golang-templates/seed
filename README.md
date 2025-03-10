@@ -96,8 +96,6 @@ Notable files:
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
 - [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image,
 - [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),
-- [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
-- [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
 
 ## FAQ
 
