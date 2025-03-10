@@ -6,6 +6,10 @@ linters-settings:
     min-complexity: 15
   goimports:
     local-prefixes: github.com/golang-templates/seed
+  govet:
+    enable-all: true
+    disable:
+    - fieldalignment
   misspell:
     locale: US
   nolintlint:
@@ -21,20 +25,19 @@ linters:
   enable:
     - asasalint
     - bodyclose
+    - copyloopvar
     - dogsled
     - dupl
     - dupword
     - errcheck
-    - exportloopref
+    - errorlint
     - funlen
     - gocritic
     - goconst
     - gocyclo
+    - godot
     - gofumpt
     - goimports
-    - revive
-    - rowserrcheck
-    - godot
     - goprintffuncname
     - gosec
     - gosimple
@@ -46,13 +49,17 @@ linters:
     - noctx
     - nolintlint
     - perfsprint
+    - revive
+    - rowserrcheck
+    - sqlclosecheck
     - staticcheck
     - stylecheck
-    - sqlclosecheck
     - typecheck
     - unconvert
     - unparam
     - unused
+    - usestdlibvars
+    - usetesting
     - whitespace
 
 issues:
