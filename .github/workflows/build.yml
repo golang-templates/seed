@@ -36,7 +36,7 @@ jobs:
           name: coverage-${{ matrix.os }}
           path: coverage.*
 
-      - run: goreleaser release --clean --snapshot
+      - run: go tool goreleaser release --clean --snapshot
         if: ${{ runner.os == 'Linux' }}
 
       - name: Upload dist
