@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 .PHONY: all
 all: ## build pipeline
-all: mod inst gen build spell lint test
+all: mod gen build spell lint test
 
 .PHONY: precommit
 precommit: ## validate the branch before commit
@@ -30,29 +30,25 @@ mod: ## go mod tidy
 	go mod tidy
 	cd tools && go mod tidy
 
-.PHONY: inst
-inst: ## go install tools
-	cd tools && go install $(shell cd tools && go list -e -f '{{ join .Imports " " }}' -tags=tools)
-
 .PHONY: gen
 gen: ## go generate
 	go generate ./...
 
 .PHONY: build
 build: ## goreleaser build
-	goreleaser build --clean --single-target --snapshot
+	go tool goreleaser build --clean --single-target --snapshot
 
 .PHONY: spell
 spell: ## misspell
-	misspell -error -locale=US -w **.md
+	go tool misspell -error -locale=US -w **.md
 
 .PHONY: lint
 lint: ## golangci-lint
-	golangci-lint run --fix
+	go tool golangci-lint run --fix
 
 .PHONY: vuln
 vuln: ## govulncheck
-	govulncheck ./...
+	go tool govulncheck ./...
 
 .PHONY: test
 test: ## go test
