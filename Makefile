@@ -28,7 +28,6 @@ clean: ## remove files created during build pipeline
 .PHONY: mod
 mod: ## go mod tidy
 	go mod tidy
-	cd tools && go mod tidy
 
 .PHONY: gen
 gen: ## go generate
