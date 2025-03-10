@@ -1,3 +1,3 @@
 module github.com/golang-templates/seed
 
-go 1.23
+go 1.24.0
