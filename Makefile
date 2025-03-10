@@ -1,6 +1,7 @@
 SHELL := /bin/bash
 
 .DEFAULT_GOAL := all
+
 .PHONY: all
 all: ## build pipeline
 all: mod inst gen build spell lint test
