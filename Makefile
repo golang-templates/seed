@@ -27,7 +27,7 @@ clean: ## remove files created during build pipeline
 
 .PHONY: run
 run: ## go run
-	go run main.go
+	go run .
 
 .PHONY: mod
 mod: ## go mod tidy
