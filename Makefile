@@ -25,6 +25,10 @@ clean: ## remove files created during build pipeline
 	rm -f '"$(shell go env GOCACHE)/../golangci-lint"'
 	go clean -i -cache -testcache -modcache -fuzzcache -x
 
+.PHONY: run
+run: ## Run the Go application
+	go run main.go
+
 .PHONY: mod
 mod: ## go mod tidy
 	go mod tidy
