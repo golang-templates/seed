@@ -26,7 +26,7 @@ clean: ## remove files created during build pipeline
 	go clean -i -cache -testcache -modcache -fuzzcache -x
 
 .PHONY: run
-run: ## Run the Go application
+run: ## go run
 	go run main.go
 
 .PHONY: mod
