@@ -49,9 +49,15 @@ lint: ## golangci-lint
 vuln: ## govulncheck
 	go tool govulncheck ./...
 
+ifeq ($(strip $(CGO_ENABLED)),0)
+RACE_OPT =
+else
+RACE_OPT = -race
+endif
+
 .PHONY: test
 test: ## go test
-	go test -race -covermode=atomic -coverprofile=coverage.out -coverpkg=./... ./...
+	go test $(RACE_OPT) -covermode=atomic -coverprofile=coverage.out -coverpkg=./... ./...
 	go tool cover -html=coverage.out -o coverage.html
 
 .PHONY: diff
