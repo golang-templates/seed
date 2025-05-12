@@ -49,7 +49,7 @@ lint: ## golangci-lint
 vuln: ## govulncheck
 	go tool govulncheck ./...
 
-ifeq ($(strip $(CGO_ENABLED)),0)
+ifeq ($(CGO_ENABLED),0)
 RACE_OPT =
 else
 RACE_OPT = -race
