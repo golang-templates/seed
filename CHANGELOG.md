@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `run` target which runs `go run`. ([#376](https://github.com/golang-templates/seed/pull/376))
 
+### Fixed
+
+- Allow testing when CGO_ENABLED=0. ([#383](https://github.com/golang-templates/seed/pull/383))
+
 ## [0.21.0](https://github.com/golang-templates/seed/releases/tag/v0.21.0)
 
 ### Added
