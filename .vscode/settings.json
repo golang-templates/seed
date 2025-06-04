@@ -3,21 +3,19 @@
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
-        },
+        }
     },
     "[go.mod]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
-        },
+        }
     },
-    // gopls
     "go.useLanguageServer": true,
     "gopls": {
         "formatting.local": "github.com/golang-templates/seed",
         "formatting.gofumpt": true
     },
-    // golangci-lint  
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
