@@ -5,19 +5,11 @@
 
 version: 2
 updates:
-  # Maintain dependencies for Go
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
       interval: "weekly"
 
-  # Maintain dependencies for build tools
-  - package-ecosystem: "gomod"
-    directory: "/tools"
-    schedule:
-      interval: "weekly"
-
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -26,4 +18,4 @@ updates:
   - package-ecosystem: docker
     directory: /
     schedule:
-      interval: daily
+      interval: "weekly"
