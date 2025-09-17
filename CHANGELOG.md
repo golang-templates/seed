@@ -5,15 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/golang-templates/seed/compare/v0.21.0...HEAD)
+## [Unreleased](https://github.com/golang-templates/seed/compare/v0.22.0...HEAD)
+
+## [0.22.0](https://github.com/golang-templates/seed/releases/tag/v0.22.0)
 
 ### Added
 
 - Add `run` target which runs `go run`. ([#376](https://github.com/golang-templates/seed/pull/376))
 
+### Changed
+
+- Update golangci-lint to v2. ([#412](https://github.com/golang-templates/seed/pull/412))
+- Update GoReleaser archive configuration. ([#390](https://github.com/golang-templates/seed/pull/390))
+
 ### Fixed
 
 - Allow testing when CGO_ENABLED=0. ([#383](https://github.com/golang-templates/seed/pull/383))
+- Fix JSON errors in VS Code settings. ([#387](https://github.com/golang-templates/seed/pull/387))
 
 ## [0.21.0](https://github.com/golang-templates/seed/releases/tag/v0.21.0)
 
