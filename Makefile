@@ -23,7 +23,11 @@ help:
 
 .PHONY: mdlint
 mdlint: ## markdownlint
+ifneq ($(filter 1 true,$(SKIP_DOCKER)),)
+	@echo "Skipping $(@) per SKIP_DOCKER=$(SKIP_DOCKER)"
+else
 	docker run --rm -v "$(PWD):/workdir" ghcr.io/igorshubovych/markdownlint-cli:$(MARKDOWNLINT_VERSION) "**/*.md"
+endif
 
 .PHONY: clean
 clean: ## remove files created during build pipeline
