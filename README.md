@@ -41,12 +41,12 @@ It includes:
 
 1. Sign up on [Codecov](https://codecov.io/) and configure
    [Codecov GitHub Application](https://github.com/apps/codecov).
-1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
-1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
-1. Follow [these](https://docs.codecov.com/docs/adding-the-codecov-token#github-actions)
+2. Click the `Use this template` button (alt. clone or download this repository).
+3. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
+4. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
+5. Follow [these](https://docs.codecov.com/docs/adding-the-codecov-token#github-actions)
    instructions to add the `CODECOV_TOKEN` as a GitHub Actions secret.
-1. Update the following files:
+6. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
    - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
    - [LICENSE](LICENSE)
@@ -61,10 +61,10 @@ However, take notice that the Visual Studio Go extension is
 [officially supported](https://blog.golang.org/vscode-go) by the Go team.
 
 1. Install [Go](https://golang.org/doc/install).
-1. Install [Visual Studio Code](https://code.visualstudio.com/).
-1. Install [Go extension](https://code.visualstudio.com/docs/languages/go).
-1. Clone and open this repository.
-1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
+2. Install [Visual Studio Code](https://code.visualstudio.com/).
+3. Install [Go extension](https://code.visualstudio.com/docs/languages/go).
+4. Clone and open this repository.
+5. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
 
 ## Build
 
@@ -112,7 +112,7 @@ You can always remove the [.vscode](.vscode) directory if it really does not hel
 ### Why GitHub Actions, not any other CI server
 
 GitHub Actions is out-of-the-box if you are already using GitHub.
-[Here](https://github.com/mvdan/github-actions-golang) you can learn how to use it for Go.
+[GitHub Actions for Go guide](https://github.com/mvdan/github-actions-golang) explains how to use it for Go.
 
 However, changing to any other CI server should be very simple,
 because this repository has build logic and tooling installation in [Makefile](Makefile).
@@ -125,7 +125,7 @@ to `C:\TDM-GCC-64\bin\make.exe`.
 Alternatively, you may install [mingw-w64](http://mingw-w64.org/doku.php)
 and copy `mingw32-make.exe` accordingly.
 
-Take a look [here](https://github.com/docker-archive/toolbox/issues/673#issuecomment-355275054),
+Take a look at [this workaround](https://github.com/docker-archive/toolbox/issues/673#issuecomment-355275054),
 if you have problems using Docker in Git Bash.
 
 You can also use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10)

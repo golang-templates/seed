@@ -1,0 +1,13 @@
+# Disable overly strict rules for docs
+line-length: false       # MD013
+no-inline-html: false    # MD033 - Allow HTML comments for metadata
+
+# Style preferences
+heading-style:           # MD003
+  style: atx
+ul-indent:               # MD007
+  indent: 2
+ol-prefix:               # MD029
+  style: ordered
+no-duplicate-heading:    # MD024
+  siblings_only: true

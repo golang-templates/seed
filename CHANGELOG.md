@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/golang-templates/seed/compare/v0.22.1...HEAD)
 
+### Added
+
+- Add `mdlint` target which runs `markdownlint-cli`. ([#376](https://github.com/golang-templates/seed/pull/376))
+
 ### Changed
 
 - Replace Dependabot with Renovate for dependency updates. ([#438](https://github.com/golang-templates/seed/pull/438), [#442](https://github.com/golang-templates/seed/pull/442))
