@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Replace Dependabot with Renovate or dependency updates.
+- Replace Dependabot with Renovate or dependency updates. ([#438](https://github.com/golang-templates/seed/pull/438), [#442](https://github.com/golang-templates/seed/pull/442))
 
 ## [0.22.1](https://github.com/golang-templates/seed/releases/tag/v0.22.1)
 
