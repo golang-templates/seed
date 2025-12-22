@@ -1,6 +1,6 @@
 module github.com/golang-templates/seed
 
-go 1.25.1
+go 1.25.5
 
 tool (
 	github.com/client9/misspell/cmd/misspell
