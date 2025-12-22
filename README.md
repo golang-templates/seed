@@ -32,7 +32,7 @@ It includes:
   code coverage [HTML report](https://blog.golang.org/cover)
   and [Codecov report](https://codecov.io/),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
-- dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
+- dependencies scanning and updating thanks to [Renovate](https://github.com/renovatebot/renovate), configured via the [Renovate GitHub App](https://github.com/apps/renovate),
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
   and [govulncheck](https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck),
 - [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) support.
@@ -45,7 +45,7 @@ It includes:
 1. Replace all occurrences of `golang-templates/seed` to `your_org/repo_name` in all files.
 1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Follow [these](https://docs.codecov.com/docs/adding-the-codecov-token#github-actions)
-   instructions to add the `CODECOV_TOKEN` GitHub Actions and Dependabot secret.
+   instructions to add the `CODECOV_TOKEN` as a GitHub Actions secret.
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
    - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
@@ -90,7 +90,7 @@ More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules
 Notable files:
 
 - [.github/workflows](.github/workflows) - GitHub Actions workflows,
-- [.github/dependabot.yml](.github/dependabot.yml) - Dependabot configuration,
+- [renovate.json](renovate.json) - Renovate configuration,
 - [.vscode](.vscode) - Visual Studio Code configuration files,
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration,
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
