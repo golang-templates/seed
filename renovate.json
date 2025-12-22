@@ -3,5 +3,8 @@
   "extends": [
     "config:best-practices",
     "customManagers:makefileVersions"
-  ]
+  ],
+  "postUpdateOptions": [
+		"gomodTidy"
+	]
 }
