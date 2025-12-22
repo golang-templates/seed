@@ -25,8 +25,9 @@ It includes:
 - build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
-- linting with [golangci-lint](https://github.com/golangci/golangci-lint)
-  and [misspell](https://github.com/client9/misspell),
+- linting with [golangci-lint](https://github.com/golangci/golangci-lint),
+  [misspell](https://github.com/client9/misspell),
+  and [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli),
 - unit testing with
   [race detector](https://blog.golang.org/race-detector),
   code coverage [HTML report](https://blog.golang.org/cover)
