@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add `mdlint` target which runs `markdownlint-cli`. ([#376](https://github.com/golang-templates/seed/pull/376))
+- Add `mdlint` target which runs `markdownlint-cli`. ([#443](https://github.com/golang-templates/seed/pull/443))
 
 ### Changed
 
