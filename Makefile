@@ -3,7 +3,7 @@ SHELL := /bin/bash
 .DEFAULT_GOAL := all
 
 # renovate: datasource=docker depName=ghcr.io/igorshubovych/markdownlint-cli versioning=docker
-MARKDOWNLINT_VERSION = v0.47.0
+MARKDOWNLINT_VERSION = sha256:b771097d3d9ec6b368fefcea5f0c05c8710293d9251fca17e31c8e10987b50ef # v0.46.0
 
 .PHONY: all
 all: ## build pipeline
@@ -26,7 +26,7 @@ mdlint: ## markdownlint
 ifneq ($(filter 1 true,$(SKIP_DOCKER)),)
 	@echo "Skipping $(@) per SKIP_DOCKER=$(SKIP_DOCKER)"
 else
-	docker run --rm -v "$(PWD):/workdir" ghcr.io/igorshubovych/markdownlint-cli:$(MARKDOWNLINT_VERSION) "**/*.md"
+	docker run --rm -v "$(PWD):/workdir" ghcr.io/igorshubovych/markdownlint-cli@$(MARKDOWNLINT_VERSION) "**/*.md"
 endif
 
 .PHONY: clean
