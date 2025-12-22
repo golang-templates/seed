@@ -2,9 +2,12 @@ SHELL := /bin/bash
 
 .DEFAULT_GOAL := all
 
+# renovate: datasource=docker depName=ghcr.io/igorshubovych/markdownlint-cli versioning=docker
+MARKDOWNLINT_VERSION = v0.47.0
+
 .PHONY: all
 all: ## build pipeline
-all: mod gen build spell lint test
+all: mdlint mod gen build spell lint test
 
 .PHONY: precommit
 precommit: ## validate the branch before commit
@@ -17,6 +20,14 @@ ci: precommit diff
 .PHONY: help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+.PHONY: mdlint
+mdlint: ## markdownlint
+ifneq ($(filter 1 true,$(SKIP_DOCKER)),)
+	@echo "Skipping $(@) per SKIP_DOCKER=$(SKIP_DOCKER)"
+else
+	docker run --rm -v "$(PWD):/workdir" ghcr.io/igorshubovych/markdownlint-cli:$(MARKDOWNLINT_VERSION) "**/*.md"
+endif
 
 .PHONY: clean
 clean: ## remove files created during build pipeline
