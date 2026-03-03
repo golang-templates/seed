@@ -3,7 +3,7 @@ SHELL := /bin/bash
 .DEFAULT_GOAL := all
 
 # renovate: datasource=docker depName=ghcr.io/igorshubovych/markdownlint-cli versioning=docker
-MARKDOWNLINT_VERSION = sha256:9f06c8c9a75aa08b87b235b66d618f7df351f09f08faf703177f670e38ee6511 # v0.47.0
+MARKDOWNLINT_VERSION = sha256:c97f19b52cf7371ff767c080e3e15c15f1cbd3336fc41aeca7a93bb2cdb9843c # v0.48.0
 
 .PHONY: all
 all: ## build pipeline
